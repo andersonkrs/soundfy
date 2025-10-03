@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "72549efab30f8ee3d9918de417d36436"
+name = "Soundfy Dev"
+application_url = "https://dev.soundfy.app"
+embedded = true
+
+[webhooks]
+api_version = "2025-10"
+
+[access_scopes]
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://dev.soundfy.app/api/auth",
+  "https://dev.soundfy.app/api/auth/callback",
+  "https://dev.soundfy.app/auth/callback",
+  "https://dev.soundfy.app/auth/shopify/callback"
+]
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "bossa-nova-hits.myshopify.com"
+
+[pos]
+embedded = false

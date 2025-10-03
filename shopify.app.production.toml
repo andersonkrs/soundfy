@@ -1,0 +1,25 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a07bf271eae4d34369c53deaebc2cd40"
+name = "Soundfy"
+application_url = "https://platform.soundfy.app"
+embedded = true
+
+[webhooks]
+api_version = "2025-10"
+
+[access_scopes]
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://platform.soundfy.app/api/auth",
+  "https://platform.soundfy.app/api/auth/callback",
+  "https://platform.soundfy.app/auth/callback",
+  "https://platform.soundfy.app/auth/shopify/callback"
+]
+
+[build]
+
+[pos]
+embedded = false

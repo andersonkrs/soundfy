@@ -1,0 +1,11 @@
+SolidQueue-1.2.1 Register Supervisor (59.3ms)  pid: 6852, hostname: "MacBook-Pro-de-Anderson.local", process_id: 11, name: "supervisor-44ad076de3c52eb125f7"
+SolidQueue-1.2.1 Fail claimed jobs (3.0ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (73.1ms)  pid: 6852, hostname: "MacBook-Pro-de-Anderson.local", process_id: 11, name: "supervisor-44ad076de3c52eb125f7"
+SolidQueue-1.2.1 Prune dead processes (9.0ms)  size: 0
+SolidQueue-1.2.1 Replaced terminated Worker (7.3ms)  pid: 6960, status: "no exit status set", pid_from_status: 6960, signaled: true, stopsig: nil, termsig: 11, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-c6bf3509091eccdeb4b6"
+SolidQueue-1.2.1 Replaced terminated Dispatcher (3.2ms)  pid: 6959, status: "no exit status set", pid_from_status: 6959, signaled: true, stopsig: nil, termsig: 11, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-730b79233ae9f7530494"
+SolidQueue-1.2.1 Replaced terminated Dispatcher (6.2ms)  pid: 6962, status: "no exit status set", pid_from_status: 6962, signaled: true, stopsig: nil, termsig: 11, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-8d5469b30ef3e3ddb734"
+SolidQueue-1.2.1 Replaced terminated Worker (3.8ms)  pid: 6961, status: "no exit status set", pid_from_status: 6961, signaled: true, stopsig: nil, termsig: 11, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-64411cdf143ebe3c5e81"
+SolidQueue-1.2.1 Supervisor terminated gracefully (109.4ms)  process_id: 11, supervisor_pid: 6852, supervised_processes: [6976, 6977]
+SolidQueue-1.2.1 Deregister Supervisor (8.4ms)  process_id: 11, pid: 6852, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-44ad076de3c52eb125f7", last_heartbeat_at: "2025-09-22T03:03:37Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (8.6ms)  pid: 6852, hostname: "MacBook-Pro-de-Anderson.local", process_id: 11, name: "supervisor-44ad076de3c52eb125f7"
