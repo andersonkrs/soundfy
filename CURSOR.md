@@ -284,6 +284,9 @@ bin/rails db:create
 bin/rails db:migrate
 bin/rails db:seed
 
+# Install git hooks (optional but recommended)
+./script/install-hooks
+
 # Configure Shopify credentials
 bin/rails credentials:edit
 # Add:
@@ -345,10 +348,12 @@ bin/rails test test/models/recording_test.rb:10
 ### Code Quality
 
 ```bash
-# Ruby linting (RuboCop)
-bundle exec rubocop         # Check all files
-bundle exec rubocop -a      # Auto-fix safe issues
-bundle exec rubocop -A      # Auto-fix all issues
+# Ruby linting/formatting (Standard)
+bin/standardrb              # Check all files
+bin/standardrb --fix        # Auto-fix issues
+
+# The pre-commit hook automatically runs Standard on staged files
+# Install it with: ./script/install-hooks
 
 # Security scanning
 bundle exec brakeman        # Security vulnerability scan
