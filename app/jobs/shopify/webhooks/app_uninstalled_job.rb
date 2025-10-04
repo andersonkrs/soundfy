@@ -18,8 +18,6 @@ class Shopify::Webhooks::AppUninstalledJob < ApplicationJob
 
     logger.info("#{self.class} started for shop '#{shop_domain}'")
 
-    binding.break
-
     shop.with_lock do
       shop.uninstall
       shop.save(validate: false)

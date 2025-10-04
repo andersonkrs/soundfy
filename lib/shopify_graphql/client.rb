@@ -66,16 +66,16 @@ class ShopifyGraphql::Client
       errors_data = errors.map(&:deep_symbolize_keys)
 
       case errors_data
-      in [ { message: "503 Service Unavailable" }, * ] |
-         [ { message: "503 Service Temporarily Unavailable" }, * ] |
-         [ { message: "504 Gateway Timeout" }, * ] |
-         [ { message: "502 Bad Gateway" }, * ] |
-         [ { message: "520 " }, * ] |
-         [ { message: "530 " }, * ] |
-         [ { message: "500 Internal Server Error" }, * ] => info
+      in [{message: "503 Service Unavailable"}, *] |
+         [{message: "503 Service Temporarily Unavailable"}, *] |
+         [{message: "504 Gateway Timeout"}, *] |
+         [{message: "502 Bad Gateway"}, *] |
+         [{message: "520 "}, *] |
+         [{message: "530 "}, *] |
+         [{message: "500 Internal Server Error"}, *] => info
         ActiveSupport::Notifications.instrument("shopify_graphql_api.request.connection_error", instrumentation_context)
         raise ConnectionError.new(errors_data, info.dig(0, :message))
-      in [ { message: "Throttled" }, * ]
+      in [{message: "Throttled"}, *]
         ActiveSupport::Notifications.instrument("shopify_graphql_api.request.throttled", instrumentation_context)
         raise TooManyRequestsError, errors_data
       else
@@ -89,7 +89,7 @@ class ShopifyGraphql::Client
 
   def handle_api_request_error(errors)
     case errors
-    in [ { extensions: { code: "TOO_MANY_PARALLEL_REQUESTS_FOR_THIS_PRODUCT" } }, * ] => data
+    in [{extensions: {code: "TOO_MANY_PARALLEL_REQUESTS_FOR_THIS_PRODUCT"}}, *] => data
       raise EntityLockedError, data
     else
       raise APIRequestError, errors
@@ -100,7 +100,7 @@ class ShopifyGraphql::Client
     active_session = ShopifyAPI::Context.active_session
     shopify_domain = active_session&.shop
 
-    @instrumentation_context = { shop: shopify_domain }
+    @instrumentation_context = {shop: shopify_domain}
     Rails.error.set_context(shop: shopify_domain, graphql_variables: variables.as_json)
   end
 end

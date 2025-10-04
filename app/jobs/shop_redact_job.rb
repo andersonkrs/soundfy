@@ -1,4 +1,4 @@
-class ShopRedactJob < ActiveJob::Base
+class ShopRedactJob < ApplicationJob
   extend ShopifyAPI::Webhooks::Handler
 
   class << self
@@ -12,7 +12,7 @@ class ShopRedactJob < ActiveJob::Base
 
     if shop.nil?
       logger.error("#{self.class} failed: cannot find shop with domain '#{shop_domain}'")
-      
+
       raise ActiveRecord::RecordNotFound, "Shop Not Found"
     end
 

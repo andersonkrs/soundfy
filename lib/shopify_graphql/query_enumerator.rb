@@ -8,7 +8,7 @@ class ShopifyGraphql::QueryEnumerator
   end
 
   def self.new(*args, **kwargs)
-    super(*args, **kwargs).to_enum(:each).lazy
+    super.to_enum(:each).lazy
   end
 
   private

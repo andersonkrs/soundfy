@@ -2,7 +2,6 @@ class Variant < ApplicationRecord
   belongs_to :shop
   belongs_to :product
 
-  validates :shop_id, presence: true
   validate :same_shop_as_product
 
   # Scope for regular variants (not STI subclasses)

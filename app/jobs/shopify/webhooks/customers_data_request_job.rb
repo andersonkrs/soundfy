@@ -12,7 +12,7 @@ class Shopify::Webhooks::CustomersDataRequestJob < ApplicationJob
 
     if shop.nil?
       logger.error("#{self.class} failed: cannot find shop with domain '#{shop_domain}'")
-      
+
       raise ActiveRecord::RecordNotFound, "Shop Not Found"
     end
 

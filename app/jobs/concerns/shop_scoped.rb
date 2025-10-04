@@ -6,9 +6,9 @@ module ShopScoped
 
     around_perform do |job, block|
       case job.arguments
-      in [ { shop: shop }, * ]
+      in [{shop: shop}, *]
         self.shop = shop
-      in [ { shop_domain: shop_domain }, * ]
+      in [{shop_domain: shop_domain}, *]
         self.shop = Shop.find_by(shopify_domain: shop_domain)
 
         if shop.nil?

@@ -31,7 +31,7 @@ bin/rails test test/path  # Run specific test file
 
 ### Code Quality
 ```bash
-bundle exec rubocop        # Run Ruby linter
+bundle exec standardrb     # Run Ruby linter
 bundle exec brakeman       # Security analysis
 ```
 

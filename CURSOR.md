@@ -99,6 +99,7 @@ The app uses Single Table Inheritance (STI) and polymorphic associations to hand
 - Can be archived with `archived_at` timestamp
 - Enforces one active recording per variant per shop
 - Inherits all Variant attributes (title, shopify_uuid, product_id, etc.)
+- Check constraint: `recordable_type` must be NULL or one of: 'SingleTrack', 'Album', 'AlbumTrack'
 
 #### Recording Types (Recordables)
 
@@ -555,8 +556,9 @@ shopify:
 
 1. **Use safe-pg-migrations gem** for zero-downtime migrations
 2. **Add indexes** for all foreign keys
-3. **Add constraints** at database level
+3. **Add constraints** at database level (check constraints, foreign keys, etc.)
 4. **Use `null: false`** where appropriate
+5. **Add check constraints** for enums and restricted values to ensure data integrity
 
 ### When Adding Frontend Pages
 
@@ -678,9 +680,12 @@ Configuration in `config/deploy.yml`.
   - Regular variants have `type: nil`
   - Recording variants have `type: 'Recording'`
   - All variant attributes are inherited by Recording
+  - Check constraint: `type` must be NULL or 'Recording'
 - **Polymorphic Recordables**: Recording types use polymorphic associations via `recordable`
   - SingleTrack, Album, and AlbumTrack are recordable types
   - Each has its own table with shop_id
+  - Check constraint: `recordable_type` must be NULL or 'SingleTrack', 'Album', 'AlbumTrack'
 - **Handle archival correctly**: Recordings can be archived and restored, use `archived?` checks
 - **Use delegated types**: Recording uses `delegated_type` for type-specific behavior
 - **Variant scopes**: Use `Variant.regular` for non-Recording variants, or query by type
+- **Database constraints**: Both `type` and `recordable_type` have check constraints for data integrity

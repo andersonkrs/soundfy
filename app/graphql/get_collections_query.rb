@@ -2,7 +2,7 @@ class GetCollectionsQuery
   def self.enumerator(limit:, search: nil, after: nil)
     ShopifyGraphql::QueryEnumerator.new(
       COLLECTIONS_QUERY,
-      dig: [ :collections ],
+      dig: [:collections],
       variables: {
         limit: limit,
         after: after,

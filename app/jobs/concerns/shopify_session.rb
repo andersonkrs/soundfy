@@ -4,7 +4,7 @@ module ShopifySession
   included do
     around_perform do |job, block|
       case job.arguments
-      in [ { shop: shop }, * ]
+      in [{shop: shop}, *]
         shop.with_shopify_session(&block)
       else
         block.call

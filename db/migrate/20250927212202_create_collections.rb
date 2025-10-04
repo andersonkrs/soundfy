@@ -8,6 +8,6 @@ class CreateCollections < ActiveRecord::Migration[8.1]
       t.timestamps
     end
 
-    add_index :collections, [ :shop_id, :shopify_uuid ], unique: true
+    add_index :collections, [:shop_id, :shopify_uuid], unique: true
   end
 end

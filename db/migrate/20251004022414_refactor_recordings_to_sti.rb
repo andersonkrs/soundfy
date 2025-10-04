@@ -11,14 +11,14 @@ class RefactorRecordingsToSti < ActiveRecord::Migration[8.1]
     add_column :variants, :archived_at, :datetime
 
     # Add index for polymorphic recordable association
-    add_index :variants, [:shop_id, :recordable_type, :recordable_id], 
-              name: 'index_variants_on_shop_and_recordable'
+    add_index :variants, [:shop_id, :recordable_type, :recordable_id],
+      name: "index_variants_on_shop_and_recordable"
 
     # Add unique constraint for active recordings (one per variant)
-    add_index :variants, [:shop_id, :id], 
-              unique: true, 
-              where: "type = 'Recording' AND archived_at IS NULL",
-              name: 'index_variants_on_shop_and_id_for_active_recordings'
+    add_index :variants, [:shop_id, :id],
+      unique: true,
+      where: "type = 'Recording' AND archived_at IS NULL",
+      name: "index_variants_on_shop_and_id_for_active_recordings"
 
     # Single tracks table (recordable type)
     create_table :single_tracks do |t|

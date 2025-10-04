@@ -8,7 +8,7 @@ class AddBasicShopifyModels < ActiveRecord::Migration[8.1]
       t.timestamps
     end
 
-    add_index :products, [ :shop_id, :shopify_uuid ], unique: true
+    add_index :products, [:shop_id, :shopify_uuid], unique: true
 
     # Variants table
     create_table :variants do |t|
@@ -20,7 +20,7 @@ class AddBasicShopifyModels < ActiveRecord::Migration[8.1]
       t.timestamps
     end
 
-    add_index :variants, [ :shop_id, :shopify_uuid ], unique: true
-    add_index :variants, [ :product_id ]
+    add_index :variants, [:shop_id, :shopify_uuid], unique: true
+    add_index :variants, [:product_id]
   end
 end

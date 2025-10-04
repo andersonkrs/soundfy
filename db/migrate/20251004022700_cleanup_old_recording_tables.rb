@@ -8,17 +8,17 @@ class CleanupOldRecordingTables < ActiveRecord::Migration[8.1]
     # Remove audio_id references and indexes
     if column_exists?(:album_tracks, :audio_id)
       remove_index :album_tracks, :audio_id if index_exists?(:album_tracks, :audio_id)
-      remove_column :album_tracks, :audio_id
+      remove_column :album_tracks, :audio_id # standard:disable Rails/ReversibleMigration
     end
 
     if column_exists?(:albums, :audio_id)
       remove_index :albums, :audio_id if index_exists?(:albums, :audio_id)
-      remove_column :albums, :audio_id
+      remove_column :albums, :audio_id # standard:disable Rails/ReversibleMigration
     end
 
     if column_exists?(:single_tracks, :audio_id)
       remove_index :single_tracks, :audio_id if index_exists?(:single_tracks, :audio_id)
-      remove_column :single_tracks, :audio_id
+      remove_column :single_tracks, :audio_id # standard:disable Rails/ReversibleMigration
     end
 
     # Drop the audios table

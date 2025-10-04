@@ -1,0 +1,8 @@
+parallel: true          # default: false
+ignore:
+  - 'vendor/**/*'
+  - 'node_modules/**/*'
+  - 'tmp/**/*'
+  - 'log/**/*'
+plugins:
+  - standard-rails

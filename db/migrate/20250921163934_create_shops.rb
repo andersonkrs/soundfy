@@ -1,6 +1,6 @@
-class CreateShops < ActiveRecord::Migration[8.1]
+class CreateShops < ActiveRecord::Migration[8.1] # standard:disable Rails/ReversibleMigrationMethodDefinition
   def self.up
-    create_table :shops  do |t|
+    create_table :shops do |t|
       t.string :shopify_domain, null: false
       t.string :shopify_token, null: false
       t.timestamps
