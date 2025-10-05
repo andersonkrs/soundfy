@@ -392,3 +392,69 @@ SolidQueue-1.2.1 Claim jobs (46.9ms)  process_id: 59, job_ids: [10], claimed_job
 SolidQueue-1.2.1 Prune dead processes (12.9ms)  size: 0
 SolidQueue-1.2.1 Prune dead processes (17.3ms)  size: 0
 SolidQueue-1.2.1 Unblock jobs (10.7ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (19.6ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (27.3ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (5.6ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (26.1ms)  size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (20.9ms)  process_id: 60, pid: 48802, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-8bc82c3f90214d9b86ae", last_heartbeat_at: "2025-10-05T11:17:14Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (23.0ms)  pid: 48802, hostname: "MacBook-Pro-de-Anderson.local", process_id: 60, name: "dispatcher-8bc82c3f90214d9b86ae", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.9ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (13.2ms)  process_id: 59, pid: 48803, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-2ecf837fa136b2637ed9", last_heartbeat_at: "2025-10-05T11:17:14Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (19.6ms)  pid: 48803, hostname: "MacBook-Pro-de-Anderson.local", process_id: 59, name: "worker-2ecf837fa136b2637ed9", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (140.3ms)  process_id: 58, supervisor_pid: 48696, supervised_processes: [48802, 48803]
+SolidQueue-1.2.1 Deregister Supervisor (15.4ms)  process_id: 58, pid: 48696, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-8aeb7a34bc24cb558b19", last_heartbeat_at: "2025-10-05T11:17:15Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (16.0ms)  pid: 48696, hostname: "MacBook-Pro-de-Anderson.local", process_id: 58, name: "supervisor-8aeb7a34bc24cb558b19"
+SolidQueue-1.2.1 Register Supervisor (65.5ms)  pid: 78295, hostname: "MacBook-Pro-de-Anderson.local", process_id: 61, name: "supervisor-11bd3aafe7b3ea3fb9bb"
+SolidQueue-1.2.1 Fail claimed jobs (7.6ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (98.1ms)  pid: 78295, hostname: "MacBook-Pro-de-Anderson.local", process_id: 61, name: "supervisor-11bd3aafe7b3ea3fb9bb"
+SolidQueue-1.2.1 Prune dead processes (13.2ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (64.3ms)  pid: 78296, hostname: "MacBook-Pro-de-Anderson.local", process_id: 62, name: "dispatcher-f0d206ffe5c00f6d1436"
+SolidQueue-1.2.1 Register Worker (60.7ms)  pid: 78297, hostname: "MacBook-Pro-de-Anderson.local", process_id: 63, name: "worker-05c873a2c3357ff7e742"
+SolidQueue-1.2.1 Started Worker (61.8ms)  pid: 78297, hostname: "MacBook-Pro-de-Anderson.local", process_id: 63, name: "worker-05c873a2c3357ff7e742", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (68.4ms)  pid: 78296, hostname: "MacBook-Pro-de-Anderson.local", process_id: 62, name: "dispatcher-f0d206ffe5c00f6d1436", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.4ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (39.6ms)  process_id: 62, pid: 78296, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-f0d206ffe5c00f6d1436", last_heartbeat_at: "2025-10-05T11:18:18Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (40.6ms)  pid: 78296, hostname: "MacBook-Pro-de-Anderson.local", process_id: 62, name: "dispatcher-f0d206ffe5c00f6d1436", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (9.8ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (45.0ms)  process_id: 63, pid: 78297, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-05c873a2c3357ff7e742", last_heartbeat_at: "2025-10-05T11:18:18Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (46.5ms)  pid: 78297, hostname: "MacBook-Pro-de-Anderson.local", process_id: 63, name: "worker-05c873a2c3357ff7e742", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (120.5ms)  process_id: 61, supervisor_pid: 78295, supervised_processes: [78296, 78297]
+SolidQueue-1.2.1 Supervisor terminated gracefully (0.1ms)  process_id: 61, supervisor_pid: 78295, supervised_processes: []
+SolidQueue-1.2.1 Deregister Supervisor (31.9ms)  process_id: 61, pid: 78295, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-11bd3aafe7b3ea3fb9bb", last_heartbeat_at: "2025-10-05T11:18:18Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (32.3ms)  pid: 78295, hostname: "MacBook-Pro-de-Anderson.local", process_id: 61, name: "supervisor-11bd3aafe7b3ea3fb9bb"
+SolidQueue-1.2.1 Register Supervisor (60.4ms)  pid: 78564, hostname: "MacBook-Pro-de-Anderson.local", process_id: 64, name: "supervisor-2ae387ee8d61a4680d6a"
+SolidQueue-1.2.1 Fail claimed jobs (6.4ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (90.2ms)  pid: 78564, hostname: "MacBook-Pro-de-Anderson.local", process_id: 64, name: "supervisor-2ae387ee8d61a4680d6a"
+SolidQueue-1.2.1 Prune dead processes (13.0ms)  size: 0
+SolidQueue-1.2.1 Register Worker (58.5ms)  pid: 78566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 65, name: "worker-70a8d5584eb8b0c19355"
+SolidQueue-1.2.1 Register Dispatcher (61.0ms)  pid: 78565, hostname: "MacBook-Pro-de-Anderson.local", process_id: 66, name: "dispatcher-8d11d6b222ca42c451a9"
+SolidQueue-1.2.1 Started Worker (59.5ms)  pid: 78566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 65, name: "worker-70a8d5584eb8b0c19355", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (63.5ms)  pid: 78565, hostname: "MacBook-Pro-de-Anderson.local", process_id: 66, name: "dispatcher-8d11d6b222ca42c451a9", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.1ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (13.9ms)  process_id: 66, pid: 78565, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-8d11d6b222ca42c451a9", last_heartbeat_at: "2025-10-05T11:19:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (14.6ms)  pid: 78565, hostname: "MacBook-Pro-de-Anderson.local", process_id: 66, name: "dispatcher-8d11d6b222ca42c451a9", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (10.5ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (38.1ms)  process_id: 65, pid: 78566, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-70a8d5584eb8b0c19355", last_heartbeat_at: "2025-10-05T11:19:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (38.7ms)  pid: 78566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 65, name: "worker-70a8d5584eb8b0c19355", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (120.2ms)  process_id: 64, supervisor_pid: 78564, supervised_processes: [78565, 78566]
+SolidQueue-1.2.1 Supervisor terminated gracefully (0.0ms)  process_id: 64, supervisor_pid: 78564, supervised_processes: []
+SolidQueue-1.2.1 Deregister Supervisor (18.5ms)  process_id: 64, pid: 78564, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-2ae387ee8d61a4680d6a", last_heartbeat_at: "2025-10-05T11:19:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (18.8ms)  pid: 78564, hostname: "MacBook-Pro-de-Anderson.local", process_id: 64, name: "supervisor-2ae387ee8d61a4680d6a"
+SolidQueue-1.2.1 Register Supervisor (82.4ms)  pid: 81505, hostname: "MacBook-Pro-de-Anderson.local", process_id: 67, name: "supervisor-4993e85897723369c080"
+SolidQueue-1.2.1 Fail claimed jobs (7.7ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (116.0ms)  pid: 81505, hostname: "MacBook-Pro-de-Anderson.local", process_id: 67, name: "supervisor-4993e85897723369c080"
+SolidQueue-1.2.1 Prune dead processes (13.1ms)  size: 0
+SolidQueue-1.2.1 Register Worker (61.7ms)  pid: 81507, hostname: "MacBook-Pro-de-Anderson.local", process_id: 68, name: "worker-2c058e6bdd5bec7df3b1"
+SolidQueue-1.2.1 Register Dispatcher (66.6ms)  pid: 81506, hostname: "MacBook-Pro-de-Anderson.local", process_id: 69, name: "dispatcher-9023b59a27141fe7afd5"
+SolidQueue-1.2.1 Started Worker (62.9ms)  pid: 81507, hostname: "MacBook-Pro-de-Anderson.local", process_id: 68, name: "worker-2c058e6bdd5bec7df3b1", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (67.7ms)  pid: 81506, hostname: "MacBook-Pro-de-Anderson.local", process_id: 69, name: "dispatcher-9023b59a27141fe7afd5", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.8ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (29.1ms)  process_id: 68, job_ids: [11], claimed_job_ids: [11], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "NameError uninitialized constant Shop::Recordings"
+SolidQueue-1.2.1 Retry failed job (37.7ms)  job_id: 11
+SolidQueue-1.2.1 Claim jobs (7.2ms)  process_id: 68, job_ids: [11], claimed_job_ids: [11], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveRecord::RecordNotFound Shop Not Found"
+SolidQueue-1.2.1 Retry failed job (28.1ms)  job_id: 11
+SolidQueue-1.2.1 Claim jobs (7.0ms)  process_id: 68, job_ids: [11], claimed_job_ids: [11], size: 1
+SolidQueue-1.2.1 Claim jobs (7.1ms)  process_id: 68, job_ids: [12], claimed_job_ids: [12], size: 1
+SolidQueue-1.2.1 Claim jobs (2.3ms)  process_id: 68, job_ids: [13, 14], claimed_job_ids: [13, 14], size: 2
