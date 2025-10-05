@@ -19,6 +19,26 @@ redirect_urls = [
   "https://dev.soundfy.app/auth/shopify/callback"
 ]
 
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled"]
+uri = "/shopify/webhooks/app_uninstalled"
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/redact"]
+uri = "/shopify/webhooks/customers_redact"
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/data_request"]
+uri = "/shopify/webhooks/customers_data_request"
+
+[[webhooks.subscriptions]]
+topics = ["products/create"]
+uri = "/shopify/webhooks/products_create"
+[[webhooks.subscriptions]]
+topics = ["products/update"]
+uri = "/shopify/webhooks/products_update"
+[[webhooks.subscriptions]]
+topics = ["products/delete"]
+uri = "/shopify/webhooks/products_delete"
+
 [build]
 automatically_update_urls_on_dev = true
 dev_store_url = "bossa-nova-hits.myshopify.com"

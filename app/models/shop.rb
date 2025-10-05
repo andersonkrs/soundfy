@@ -3,6 +3,7 @@ class Shop < ApplicationRecord
 
   include Uninstallable
   include Shopify::Collectionable
+  include Shopify::Productable
 
   def api_version
     ShopifyApp.configuration.api_version

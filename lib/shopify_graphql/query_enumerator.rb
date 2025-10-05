@@ -7,8 +7,14 @@ class ShopifyGraphql::QueryEnumerator
     @dig = dig
   end
 
-  def self.new(*args, **kwargs)
-    super.to_enum(:each).lazy
+  def self.new(*args, **kwargs, &block)
+    enum = super.to_enum(:each)
+
+    if block_given?
+      enum.each(&block)
+    else
+      enum.lazy
+    end
   end
 
   private
@@ -23,9 +29,7 @@ class ShopifyGraphql::QueryEnumerator
 
       current_cursor = query_result&.page_info&.end_cursor
 
-      if query_result&.nodes&.present?
-        yield query_result.nodes, query_result.page_info.end_cursor
-      end
+      yield query_result.nodes.presence || [], current_cursor
 
       break unless query_result&.page_info&.has_next_page
     end

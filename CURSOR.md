@@ -221,9 +221,10 @@ end
 ```
 
 **Common Jobs**
-- `Shopify::AfterAuthenticateJob` - Runs after shop installation
-- `Shopify::SyncCollectionsJob` - Syncs collections from Shopify
-- Webhook jobs - Process incoming Shopify webhooks
+- `Shopify::AfterAuthenticateJob` - Runs after shop installation, triggers product and collection sync
+- `Shopify::SyncCollectionsJob` - Syncs collections from Shopify using GraphQL
+- `Shopify::SyncProductsJob` - Syncs products and variants from Shopify using GraphQL
+- Webhook jobs - Process incoming Shopify webhooks for real-time updates
 
 ### Webhooks
 
@@ -236,29 +237,96 @@ Configured in `config/initializers/shopify_app.rb` and registered automatically.
 - `shop/redact` - GDPR shop data deletion
 
 **App Webhooks**
-- `products/update` - Product changes
+- `products/create` - Product creation (creates products and variants)
+- `products/update` - Product and variant updates (updates products and variants)
+- `products/delete` - Product deletion (soft-deletes products)
 - `collections/create|update|delete` - Collection changes
 
 ### GraphQL Integration
 
-Use `lib/shopify_graphql/` for GraphQL queries:
+The app uses a custom GraphQL client (`lib/shopify_graphql/`) for efficient batch operations with pagination.
+
+**Query Pattern:**
 
 ```ruby
-class GetProductsQuery < ShopifyGraphql::Query
-  def query
-    <<~GRAPHQL
-      query($first: Int!) {
-        products(first: $first) {
-          edges {
-            node {
+class GetProductsQuery
+  def self.enumerator(limit:, search: nil, after: nil)
+    ShopifyGraphql::QueryEnumerator.new(
+      PRODUCTS_QUERY,
+      dig: [:products],
+      variables: { limit: limit, after: after, query: search }
+    )
+  end
+
+  PRODUCTS_QUERY = <<~GRAPHQL
+    query GetProducts($limit: Int!, $after: String, $query: String) {
+      products(first: $limit, after: $after, query: $query) {
+        nodes {
+          id
+          title
+          variants(first: 100) {
+            nodes {
               id
               title
             }
           }
         }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
       }
-    GRAPHQL
+    }
+  GRAPHQL
+end
+```
+
+**Shopify Data Sync Pattern:**
+
+Each Shopify resource follows this pattern:
+
+1. **Concern** (`Shopify::Productable`) - Adds association and helper method to Shop
+2. **Service Class** (`Shopify::Products`) - Handles batch fetching and importing
+3. **GraphQL Query** (`GetProductsQuery`) - Defines the data to fetch
+4. **Sync Job** (`Shopify::SyncProductsJob`) - Background job for full sync
+5. **Webhook Jobs** - Real-time updates for individual changes
+
+**Example: Products Sync**
+
+```ruby
+# 1. Concern (app/models/shopify/productable.rb)
+module Shopify::Productable
+  extend ActiveSupport::Concern
+  
+  included do
+    has_many :products, dependent: :destroy
   end
+  
+  def shopify_products
+    Shopify::Products.new(self)
+  end
+end
+
+# 2. Service class (app/models/shopify/products.rb)
+class Shopify::Products
+  def initialize(shop)
+    @shop = shop
+  end
+  
+  def in_batches(of:, after: nil, &block)
+    enum = GetProductsQuery.enumerator(limit: of, after: after)
+    enum.each(&block)
+  end
+  
+  def import!(api_products)
+    # Bulk upsert logic
+    @shop.products.upsert_all(records, unique_by: [:shop_id, :shopify_uuid])
+  end
+end
+
+# 3. Usage in jobs
+shop.shopify_products.in_batches(of: 25) do |products, cursor|
+  shop.shopify_products.import!(products)
 end
 ```
 

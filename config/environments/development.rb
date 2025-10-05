@@ -32,7 +32,11 @@ Rails.application.configure do
 
   config.active_job.queue_adapter = :solid_queue
   config.solid_queue.connects_to = {database: {writing: :queue}}
-  config.solid_queue.logger = ActiveSupport::Logger.new($stdout)
+
+  stdout_logger = ActiveSupport::Logger.new($stdout)
+  file_logger = ActiveSupport::Logger.new("development.log")
+  config.solid_queue.logger = ActiveSupport::BroadcastLogger.new(stdout_logger, file_logger)
+  config.solid_queue.silence_polling = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

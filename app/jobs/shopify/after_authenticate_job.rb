@@ -1,7 +1,7 @@
 class Shopify::AfterAuthenticateJob < ApplicationJob
-  def perform(shop_domain:)
-    shop = Shop.find_by!(shopify_domain: shop_domain)
+  include ShopScoped
 
-    Shopify::SyncCollectionsJob.perform_later(shop: shop)
+  def perform(shop_domain:)
+    Shopify::SyncProductsJob.perform_later(shop: Current.shop)
   end
 end

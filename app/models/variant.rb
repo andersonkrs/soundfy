@@ -2,16 +2,18 @@ class Variant < ApplicationRecord
   belongs_to :shop
   belongs_to :product
 
-  validate :same_shop_as_product
-
   # Scope for regular variants (not STI subclasses)
   scope :regular, -> { where(type: nil) }
+  scope :active, -> { where(discarded_at: nil) }
+  scope :discarded, -> { where.not(discarded_at: nil) }
 
-  private
-
-  def same_shop_as_product
-    if product && product.shop_id != shop_id
-      errors.add(:product, "must belong to the same shop")
-    end
+  def discard!
+    update!(discarded_at: Time.current)
   end
+
+  def discarded?
+    discarded_at.present?
+  end
+
+  def kept? = !discarded?
 end

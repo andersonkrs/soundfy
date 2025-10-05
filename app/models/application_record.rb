@@ -3,9 +3,8 @@ class ApplicationRecord < ActiveRecord::Base
 
   class RecordLocked < StandardError; end
 
-  def with_non_blocking_lock!(lock = "FOR UPDATE", &block)
-    safe_sql = self.class.sanitize_sql([Arel.sql("? SKIP LOCKED"), lock])
-    with_lock(safe_sql, &block)
+  def with_non_blocking_lock!(lock = "FOR UPDATE SKIP LOCKED", &block)
+    with_lock(lock, &block)
   rescue ActiveRecord::RecordNotFound => e
     raise RecordLocked, "Record already locked by another process: #{e.id}"
   end

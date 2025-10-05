@@ -21,7 +21,9 @@ Rails.application.routes.draw do
       post "customers_data_request", to: "customers_data_request#receive"
 
       # App webhooks
+      post "products_create", to: "products_create#receive"
       post "products_update", to: "products_update#receive"
+      post "products_delete", to: "products_delete#receive"
 
       post "collections_create", to: "collections_create#receive"
       post "collections_update", to: "collections_update#receive"

@@ -1,0 +1,394 @@
+# Logfile created on 2025-10-05 06:28:11 -0300 by logger.rb/v1.7.0
+SolidQueue-1.2.1 Register Supervisor (51.3ms)  pid: 84227, hostname: "MacBook-Pro-de-Anderson.local", process_id: 19, name: "supervisor-48250cb1788c4725cfa8"
+SolidQueue-1.2.1 Fail claimed jobs (2.6ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (66.5ms)  pid: 84227, hostname: "MacBook-Pro-de-Anderson.local", process_id: 19, name: "supervisor-48250cb1788c4725cfa8"
+SolidQueue-1.2.1 Prune dead processes (10.1ms)  size: 0
+SolidQueue-1.2.1 Register Worker (34.4ms)  pid: 84229, hostname: "MacBook-Pro-de-Anderson.local", process_id: 20, name: "worker-83a57a2fda8c41a64bc8"
+SolidQueue-1.2.1 Register Dispatcher (37.3ms)  pid: 84228, hostname: "MacBook-Pro-de-Anderson.local", process_id: 21, name: "dispatcher-3de367ecbf9adf389fcc"
+SolidQueue-1.2.1 Started Worker (35.3ms)  pid: 84229, hostname: "MacBook-Pro-de-Anderson.local", process_id: 20, name: "worker-83a57a2fda8c41a64bc8", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (38.3ms)  pid: 84228, hostname: "MacBook-Pro-de-Anderson.local", process_id: 21, name: "dispatcher-3de367ecbf9adf389fcc", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.0ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (8.5ms)  process_id: 21, pid: 84228, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-3de367ecbf9adf389fcc", last_heartbeat_at: "2025-10-05T09:28:34Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (10.4ms)  pid: 84228, hostname: "MacBook-Pro-de-Anderson.local", process_id: 21, name: "dispatcher-3de367ecbf9adf389fcc", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (7.6ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (28.6ms)  process_id: 20, pid: 84229, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-83a57a2fda8c41a64bc8", last_heartbeat_at: "2025-10-05T09:28:34Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (29.1ms)  pid: 84229, hostname: "MacBook-Pro-de-Anderson.local", process_id: 20, name: "worker-83a57a2fda8c41a64bc8", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (117.8ms)  process_id: 19, supervisor_pid: 84227, supervised_processes: [84228, 84229]
+SolidQueue-1.2.1 Deregister Supervisor (13.5ms)  process_id: 19, pid: 84227, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-48250cb1788c4725cfa8", last_heartbeat_at: "2025-10-05T09:28:34Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (13.8ms)  pid: 84227, hostname: "MacBook-Pro-de-Anderson.local", process_id: 19, name: "supervisor-48250cb1788c4725cfa8"
+SolidQueue-1.2.1 Register Supervisor (50.8ms)  pid: 85594, hostname: "MacBook-Pro-de-Anderson.local", process_id: 22, name: "supervisor-2d76d8153bb3a3ad8679"
+SolidQueue-1.2.1 Fail claimed jobs (3.4ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (71.4ms)  pid: 85594, hostname: "MacBook-Pro-de-Anderson.local", process_id: 22, name: "supervisor-2d76d8153bb3a3ad8679"
+SolidQueue-1.2.1 Prune dead processes (8.9ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (30.3ms)  pid: 85599, hostname: "MacBook-Pro-de-Anderson.local", process_id: 24, name: "dispatcher-b3386f2b58dd723ab8a5"
+SolidQueue-1.2.1 Register Worker (27.9ms)  pid: 85600, hostname: "MacBook-Pro-de-Anderson.local", process_id: 23, name: "worker-71e8fabfcfa4dfd7c094"
+SolidQueue-1.2.1 Started Worker (28.7ms)  pid: 85600, hostname: "MacBook-Pro-de-Anderson.local", process_id: 23, name: "worker-71e8fabfcfa4dfd7c094", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (32.2ms)  pid: 85599, hostname: "MacBook-Pro-de-Anderson.local", process_id: 24, name: "dispatcher-b3386f2b58dd723ab8a5", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.1ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Release claimed jobs (3.8ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (18.8ms)  process_id: 23, pid: 85600, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-71e8fabfcfa4dfd7c094", last_heartbeat_at: "2025-10-05T09:30:26Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (19.4ms)  pid: 85600, hostname: "MacBook-Pro-de-Anderson.local", process_id: 23, name: "worker-71e8fabfcfa4dfd7c094", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Deregister Dispatcher (19.1ms)  process_id: 24, pid: 85599, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-b3386f2b58dd723ab8a5", last_heartbeat_at: "2025-10-05T09:30:26Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (19.5ms)  pid: 85599, hostname: "MacBook-Pro-de-Anderson.local", process_id: 24, name: "dispatcher-b3386f2b58dd723ab8a5", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Supervisor terminated gracefully (106.8ms)  process_id: 22, supervisor_pid: 85594, supervised_processes: [85599, 85600]
+SolidQueue-1.2.1 Deregister Supervisor (13.1ms)  process_id: 22, pid: 85594, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-2d76d8153bb3a3ad8679", last_heartbeat_at: "2025-10-05T09:30:26Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (13.4ms)  pid: 85594, hostname: "MacBook-Pro-de-Anderson.local", process_id: 22, name: "supervisor-2d76d8153bb3a3ad8679"
+SolidQueue-1.2.1 Register Supervisor (53.0ms)  pid: 85992, hostname: "MacBook-Pro-de-Anderson.local", process_id: 25, name: "supervisor-812adfb2207598e4bf2d"
+SolidQueue-1.2.1 Fail claimed jobs (4.5ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (72.4ms)  pid: 85992, hostname: "MacBook-Pro-de-Anderson.local", process_id: 25, name: "supervisor-812adfb2207598e4bf2d"
+SolidQueue-1.2.1 Prune dead processes (6.4ms)  size: 0
+SolidQueue-1.2.1 Register Worker (33.1ms)  pid: 85994, hostname: "MacBook-Pro-de-Anderson.local", process_id: 26, name: "worker-b23746b75dc675ebeac2"
+SolidQueue-1.2.1 Register Dispatcher (37.0ms)  pid: 85993, hostname: "MacBook-Pro-de-Anderson.local", process_id: 27, name: "dispatcher-21184a7b05f9f0ccaa9e"
+SolidQueue-1.2.1 Started Worker (34.2ms)  pid: 85994, hostname: "MacBook-Pro-de-Anderson.local", process_id: 26, name: "worker-b23746b75dc675ebeac2", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (38.7ms)  pid: 85993, hostname: "MacBook-Pro-de-Anderson.local", process_id: 27, name: "dispatcher-21184a7b05f9f0ccaa9e", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.9ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (17.6ms)  process_id: 26, job_ids: [3], claimed_job_ids: [3], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ShopifyAPI::Errors::NoActiveSessionError No passed or active session"
+SolidQueue-1.2.1 Deregister Dispatcher (7.4ms)  process_id: 27, pid: 85993, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-21184a7b05f9f0ccaa9e", last_heartbeat_at: "2025-10-05T09:32:53Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (8.1ms)  pid: 85993, hostname: "MacBook-Pro-de-Anderson.local", process_id: 27, name: "dispatcher-21184a7b05f9f0ccaa9e", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.7ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (14.8ms)  process_id: 26, pid: 85994, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-b23746b75dc675ebeac2", last_heartbeat_at: "2025-10-05T09:32:53Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (15.6ms)  pid: 85994, hostname: "MacBook-Pro-de-Anderson.local", process_id: 26, name: "worker-b23746b75dc675ebeac2", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (125.7ms)  process_id: 25, supervisor_pid: 85992, supervised_processes: [85993, 85994]
+SolidQueue-1.2.1 Deregister Supervisor (16.8ms)  process_id: 25, pid: 85992, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-812adfb2207598e4bf2d", last_heartbeat_at: "2025-10-05T09:32:53Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (17.1ms)  pid: 85992, hostname: "MacBook-Pro-de-Anderson.local", process_id: 25, name: "supervisor-812adfb2207598e4bf2d"
+SolidQueue-1.2.1 Register Supervisor (58.2ms)  pid: 88481, hostname: "MacBook-Pro-de-Anderson.local", process_id: 28, name: "supervisor-534e9fb55c2903aa0d60"
+SolidQueue-1.2.1 Fail claimed jobs (8.2ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (85.6ms)  pid: 88481, hostname: "MacBook-Pro-de-Anderson.local", process_id: 28, name: "supervisor-534e9fb55c2903aa0d60"
+SolidQueue-1.2.1 Prune dead processes (38.8ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (77.7ms)  pid: 88483, hostname: "MacBook-Pro-de-Anderson.local", process_id: 29, name: "dispatcher-8f9594e5a83d6ed64255"
+SolidQueue-1.2.1 Started Dispatcher (79.0ms)  pid: 88483, hostname: "MacBook-Pro-de-Anderson.local", process_id: 29, name: "dispatcher-8f9594e5a83d6ed64255", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Register Worker (69.4ms)  pid: 88485, hostname: "MacBook-Pro-de-Anderson.local", process_id: 30, name: "worker-97413751b7efd5f4b53f"
+SolidQueue-1.2.1 Started Worker (70.8ms)  pid: 88485, hostname: "MacBook-Pro-de-Anderson.local", process_id: 30, name: "worker-97413751b7efd5f4b53f", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Unblock jobs (4.4ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (26.9ms)  process_id: 30, job_ids: [2], claimed_job_ids: [2], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ShopifyAPI::Errors::HttpResponseError {\"errors\":\"[API] Invalid API key or access token (unrecognized login or wrong password)\",\"error_reference\":\"If you report this error, please include this id: 3a1ad16b-840b-425d-a49f-4fb5e30ce36b-1759656832.\"}"
+SolidQueue-1.2.1 Claim jobs (5.4ms)  process_id: 30, job_ids: [4], claimed_job_ids: [4], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "NameError undefined local variable or method 'shop' for an instance of Shop"
+SolidQueue-1.2.1 Prune dead processes (2.8ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (9.1ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (3.6ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (8.6ms)  process_id: 30, job_ids: [4], claimed_job_ids: [4], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "NoMethodError undefined method 'shopify_uninstalled_at=' for an instance of Shop"
+SolidQueue-1.2.1 Claim jobs (10.2ms)  process_id: 30, job_ids: [4], claimed_job_ids: [4], size: 1
+SolidQueue-1.2.1 Claim jobs (14.3ms)  process_id: 30, job_ids: [5], claimed_job_ids: [5], size: 1
+SolidQueue-1.2.1 Claim jobs (4.4ms)  process_id: 30, job_ids: [6], claimed_job_ids: [6], size: 1
+SolidQueue-1.2.1 Claim jobs (13.6ms)  process_id: 30, job_ids: [7], claimed_job_ids: [7], size: 1
+SolidQueue-1.2.1 Prune dead processes (8.9ms)  size: 0
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveJob::Continuation::InvalidStepError Step 'process' has already been encountered"
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveJob::Continuation::InvalidStepError Step 'process' has already been encountered"
+SolidQueue-1.2.1 Deregister Dispatcher (9.1ms)  process_id: 29, pid: 88483, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-8f9594e5a83d6ed64255", last_heartbeat_at: "2025-10-05T09:48:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (10.1ms)  pid: 88483, hostname: "MacBook-Pro-de-Anderson.local", process_id: 29, name: "dispatcher-8f9594e5a83d6ed64255", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.8ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (18.7ms)  process_id: 30, pid: 88485, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-97413751b7efd5f4b53f", last_heartbeat_at: "2025-10-05T09:48:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (19.6ms)  pid: 88485, hostname: "MacBook-Pro-de-Anderson.local", process_id: 30, name: "worker-97413751b7efd5f4b53f", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (119.8ms)  process_id: 28, supervisor_pid: 88481, supervised_processes: [88483, 88485]
+SolidQueue-1.2.1 Deregister Supervisor (20.4ms)  process_id: 28, pid: 88481, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-534e9fb55c2903aa0d60", last_heartbeat_at: "2025-10-05T09:48:36Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (20.8ms)  pid: 88481, hostname: "MacBook-Pro-de-Anderson.local", process_id: 28, name: "supervisor-534e9fb55c2903aa0d60"
+SolidQueue-1.2.1 Register Supervisor (61.1ms)  pid: 2540, hostname: "MacBook-Pro-de-Anderson.local", process_id: 31, name: "supervisor-60c4fa356f3f472d215e"
+SolidQueue-1.2.1 Fail claimed jobs (4.9ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (84.0ms)  pid: 2540, hostname: "MacBook-Pro-de-Anderson.local", process_id: 31, name: "supervisor-60c4fa356f3f472d215e"
+SolidQueue-1.2.1 Prune dead processes (10.9ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (43.3ms)  pid: 2541, hostname: "MacBook-Pro-de-Anderson.local", process_id: 33, name: "dispatcher-aa719ddc01b73b8f05e7"
+SolidQueue-1.2.1 Register Worker (39.7ms)  pid: 2542, hostname: "MacBook-Pro-de-Anderson.local", process_id: 32, name: "worker-b1d2e73670e9412061be"
+SolidQueue-1.2.1 Started Worker (41.1ms)  pid: 2542, hostname: "MacBook-Pro-de-Anderson.local", process_id: 32, name: "worker-b1d2e73670e9412061be", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (44.5ms)  pid: 2541, hostname: "MacBook-Pro-de-Anderson.local", process_id: 33, name: "dispatcher-aa719ddc01b73b8f05e7", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.1ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (15.9ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (11.3ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (5.4ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (14.2ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (16.1ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (2.3ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (13.1ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (2.6ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (9.3ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (17.6ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (7.2ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Prune dead processes (21.6ms)  size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (19.3ms)  process_id: 33, pid: 2541, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-aa719ddc01b73b8f05e7", last_heartbeat_at: "2025-10-05T10:33:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (20.6ms)  pid: 2541, hostname: "MacBook-Pro-de-Anderson.local", process_id: 33, name: "dispatcher-aa719ddc01b73b8f05e7", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (3.0ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (40.9ms)  process_id: 32, pid: 2542, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-b1d2e73670e9412061be", last_heartbeat_at: "2025-10-05T10:33:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (41.9ms)  pid: 2542, hostname: "MacBook-Pro-de-Anderson.local", process_id: 32, name: "worker-b1d2e73670e9412061be", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (126.6ms)  process_id: 31, supervisor_pid: 2540, supervised_processes: [2541, 2542]
+SolidQueue-1.2.1 Deregister Supervisor (15.1ms)  process_id: 31, pid: 2540, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-60c4fa356f3f472d215e", last_heartbeat_at: "2025-10-05T10:33:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (15.6ms)  pid: 2540, hostname: "MacBook-Pro-de-Anderson.local", process_id: 31, name: "supervisor-60c4fa356f3f472d215e"
+SolidQueue-1.2.1 Register Supervisor (56.7ms)  pid: 33047, hostname: "MacBook-Pro-de-Anderson.local", process_id: 34, name: "supervisor-2480fce815ed503fa555"
+SolidQueue-1.2.1 Fail claimed jobs (4.2ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (76.3ms)  pid: 33047, hostname: "MacBook-Pro-de-Anderson.local", process_id: 34, name: "supervisor-2480fce815ed503fa555"
+SolidQueue-1.2.1 Prune dead processes (6.4ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (40.7ms)  pid: 33048, hostname: "MacBook-Pro-de-Anderson.local", process_id: 35, name: "dispatcher-6c24369ed4e5c96f7a53"
+SolidQueue-1.2.1 Register Worker (36.8ms)  pid: 33049, hostname: "MacBook-Pro-de-Anderson.local", process_id: 36, name: "worker-b4aa3651d86c50d71c94"
+SolidQueue-1.2.1 Started Worker (37.8ms)  pid: 33049, hostname: "MacBook-Pro-de-Anderson.local", process_id: 36, name: "worker-b4aa3651d86c50d71c94", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (41.9ms)  pid: 33048, hostname: "MacBook-Pro-de-Anderson.local", process_id: 35, name: "dispatcher-6c24369ed4e5c96f7a53", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.2ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (9.8ms)  process_id: 36, job_ids: [8], claimed_job_ids: [8], size: 1
+SolidQueue-1.2.1 Claim jobs (7.5ms)  process_id: 36, job_ids: [6], claimed_job_ids: [6], size: 1
+SolidQueue-1.2.1 Claim jobs (5.2ms)  process_id: 36, job_ids: [7], claimed_job_ids: [7], size: 1
+SolidQueue-1.2.1 Deregister Dispatcher (19.4ms)  process_id: 35, pid: 33048, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-6c24369ed4e5c96f7a53", last_heartbeat_at: "2025-10-05T10:37:10Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (19.9ms)  pid: 33048, hostname: "MacBook-Pro-de-Anderson.local", process_id: 35, name: "dispatcher-6c24369ed4e5c96f7a53", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.3ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (22.8ms)  process_id: 36, pid: 33049, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-b4aa3651d86c50d71c94", last_heartbeat_at: "2025-10-05T10:37:10Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (23.4ms)  pid: 33049, hostname: "MacBook-Pro-de-Anderson.local", process_id: 36, name: "worker-b4aa3651d86c50d71c94", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (120.6ms)  process_id: 34, supervisor_pid: 33047, supervised_processes: [33048, 33049]
+SolidQueue-1.2.1 Deregister Supervisor (12.1ms)  process_id: 34, pid: 33047, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-2480fce815ed503fa555", last_heartbeat_at: "2025-10-05T10:37:10Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (12.3ms)  pid: 33047, hostname: "MacBook-Pro-de-Anderson.local", process_id: 34, name: "supervisor-2480fce815ed503fa555"
+SolidQueue-1.2.1 Register Supervisor (51.0ms)  pid: 36261, hostname: "MacBook-Pro-de-Anderson.local", process_id: 37, name: "supervisor-283f7f07020c8610ce35"
+SolidQueue-1.2.1 Fail claimed jobs (3.4ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (84.2ms)  pid: 36261, hostname: "MacBook-Pro-de-Anderson.local", process_id: 37, name: "supervisor-283f7f07020c8610ce35"
+SolidQueue-1.2.1 Prune dead processes (28.9ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (47.3ms)  pid: 36265, hostname: "MacBook-Pro-de-Anderson.local", process_id: 38, name: "dispatcher-965bea8c5ab62be0dd3b"
+SolidQueue-1.2.1 Register Worker (44.9ms)  pid: 36266, hostname: "MacBook-Pro-de-Anderson.local", process_id: 39, name: "worker-29137c45999d62d30150"
+SolidQueue-1.2.1 Started Worker (45.7ms)  pid: 36266, hostname: "MacBook-Pro-de-Anderson.local", process_id: 39, name: "worker-29137c45999d62d30150", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (48.4ms)  pid: 36265, hostname: "MacBook-Pro-de-Anderson.local", process_id: 38, name: "dispatcher-965bea8c5ab62be0dd3b", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.8ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (5.7ms)  process_id: 38, pid: 36265, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-965bea8c5ab62be0dd3b", last_heartbeat_at: "2025-10-05T10:37:23Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (6.4ms)  pid: 36265, hostname: "MacBook-Pro-de-Anderson.local", process_id: 38, name: "dispatcher-965bea8c5ab62be0dd3b", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (6.1ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (24.6ms)  process_id: 39, pid: 36266, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-29137c45999d62d30150", last_heartbeat_at: "2025-10-05T10:37:23Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (25.2ms)  pid: 36266, hostname: "MacBook-Pro-de-Anderson.local", process_id: 39, name: "worker-29137c45999d62d30150", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (118.2ms)  process_id: 37, supervisor_pid: 36261, supervised_processes: [36265, 36266]
+SolidQueue-1.2.1 Deregister Supervisor (18.8ms)  process_id: 37, pid: 36261, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-283f7f07020c8610ce35", last_heartbeat_at: "2025-10-05T10:37:23Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (19.1ms)  pid: 36261, hostname: "MacBook-Pro-de-Anderson.local", process_id: 37, name: "supervisor-283f7f07020c8610ce35"
+SolidQueue-1.2.1 Register Supervisor (52.7ms)  pid: 36954, hostname: "MacBook-Pro-de-Anderson.local", process_id: 40, name: "supervisor-be45121ee55842a311bd"
+SolidQueue-1.2.1 Fail claimed jobs (4.2ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (73.0ms)  pid: 36954, hostname: "MacBook-Pro-de-Anderson.local", process_id: 40, name: "supervisor-be45121ee55842a311bd"
+SolidQueue-1.2.1 Prune dead processes (8.6ms)  size: 0
+SolidQueue-1.2.1 Register Worker (37.3ms)  pid: 37063, hostname: "MacBook-Pro-de-Anderson.local", process_id: 41, name: "worker-3bbca81ff653d0f5334b"
+SolidQueue-1.2.1 Started Worker (38.5ms)  pid: 37063, hostname: "MacBook-Pro-de-Anderson.local", process_id: 41, name: "worker-3bbca81ff653d0f5334b", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Register Dispatcher (41.8ms)  pid: 37062, hostname: "MacBook-Pro-de-Anderson.local", process_id: 42, name: "dispatcher-22aa12d381deede412bd"
+SolidQueue-1.2.1 Started Dispatcher (42.9ms)  pid: 37062, hostname: "MacBook-Pro-de-Anderson.local", process_id: 42, name: "dispatcher-22aa12d381deede412bd", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.0ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (19.3ms)  process_id: 42, pid: 37062, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-22aa12d381deede412bd", last_heartbeat_at: "2025-10-05T10:38:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (21.2ms)  pid: 37062, hostname: "MacBook-Pro-de-Anderson.local", process_id: 42, name: "dispatcher-22aa12d381deede412bd", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (13.6ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (38.9ms)  process_id: 41, pid: 37063, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-3bbca81ff653d0f5334b", last_heartbeat_at: "2025-10-05T10:38:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (45.5ms)  pid: 37063, hostname: "MacBook-Pro-de-Anderson.local", process_id: 41, name: "worker-3bbca81ff653d0f5334b", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (133.2ms)  process_id: 40, supervisor_pid: 36954, supervised_processes: [37062, 37063]
+SolidQueue-1.2.1 Deregister Supervisor (22.7ms)  process_id: 40, pid: 36954, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-be45121ee55842a311bd", last_heartbeat_at: "2025-10-05T10:38:20Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (23.3ms)  pid: 36954, hostname: "MacBook-Pro-de-Anderson.local", process_id: 40, name: "supervisor-be45121ee55842a311bd"
+SolidQueue-1.2.1 Register Supervisor (48.0ms)  pid: 37457, hostname: "MacBook-Pro-de-Anderson.local", process_id: 43, name: "supervisor-74442de8a0c2adaa5889"
+SolidQueue-1.2.1 Fail claimed jobs (3.8ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (66.6ms)  pid: 37457, hostname: "MacBook-Pro-de-Anderson.local", process_id: 43, name: "supervisor-74442de8a0c2adaa5889"
+SolidQueue-1.2.1 Prune dead processes (6.5ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (32.0ms)  pid: 37566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 44, name: "dispatcher-d10e93a73f6982055129"
+SolidQueue-1.2.1 Register Worker (30.6ms)  pid: 37567, hostname: "MacBook-Pro-de-Anderson.local", process_id: 45, name: "worker-cc459c8ffe95711ea1b3"
+SolidQueue-1.2.1 Started Worker (31.4ms)  pid: 37567, hostname: "MacBook-Pro-de-Anderson.local", process_id: 45, name: "worker-cc459c8ffe95711ea1b3", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (33.2ms)  pid: 37566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 44, name: "dispatcher-d10e93a73f6982055129", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.4ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Deregister Dispatcher (13.6ms)  process_id: 44, pid: 37566, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-d10e93a73f6982055129", last_heartbeat_at: "2025-10-05T10:41:01Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (15.6ms)  pid: 37566, hostname: "MacBook-Pro-de-Anderson.local", process_id: 44, name: "dispatcher-d10e93a73f6982055129", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (12.2ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (42.7ms)  process_id: 45, pid: 37567, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-cc459c8ffe95711ea1b3", last_heartbeat_at: "2025-10-05T10:41:01Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (43.5ms)  pid: 37567, hostname: "MacBook-Pro-de-Anderson.local", process_id: 45, name: "worker-cc459c8ffe95711ea1b3", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (127.4ms)  process_id: 43, supervisor_pid: 37457, supervised_processes: [37566, 37567]
+SolidQueue-1.2.1 Deregister Supervisor (32.8ms)  process_id: 43, pid: 37457, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-74442de8a0c2adaa5889", last_heartbeat_at: "2025-10-05T10:41:00Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (33.8ms)  pid: 37457, hostname: "MacBook-Pro-de-Anderson.local", process_id: 43, name: "supervisor-74442de8a0c2adaa5889"
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Create (1.9ms)[0m  [1m[32mINSERT INTO "solid_queue_processes" ("created_at", "hostname", "kind", "last_heartbeat_at", "metadata", "name", "pid", "supervisor_id") VALUES ('2025-10-05 10:41:14.164789', 'MacBook-Pro-de-Anderson.local', 'Supervisor', '2025-10-05 10:41:14.121564', NULL, 'supervisor-5541291f516706a15de8', 39510, NULL) RETURNING "id" /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Register Supervisor (47.5ms)  pid: 39510, hostname: "MacBook-Pro-de-Anderson.local", process_id: 46, name: "supervisor-5541291f516706a15de8"
+  [1m[36mSolidQueue::ClaimedExecution Load (1.9ms)[0m  [1m[34mSELECT "solid_queue_claimed_executions".* FROM "solid_queue_claimed_executions" LEFT OUTER JOIN "solid_queue_processes" ON "solid_queue_processes"."id" = "solid_queue_claimed_executions"."process_id" WHERE "solid_queue_processes"."id" IS NULL /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Fail claimed jobs (3.8ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (65.9ms)  pid: 39510, hostname: "MacBook-Pro-de-Anderson.local", process_id: 46, name: "supervisor-5541291f516706a15de8"
+  [1m[36mSolidQueue::Process Load (2.0ms)[0m  [1m[37mSELECT "solid_queue_processes".* FROM "solid_queue_processes" WHERE "solid_queue_processes"."last_heartbeat_at" <= '2025-10-05 10:36:14.193796' AND "solid_queue_processes"."id" != 46 ORDER BY "solid_queue_processes"."id" ASC LIMIT 50 FOR UPDATE SKIP LOCKED /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Prune dead processes (5.3ms)  size: 0
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Create (1.9ms)[0m  [1m[32mINSERT INTO "solid_queue_processes" ("created_at", "hostname", "kind", "last_heartbeat_at", "metadata", "name", "pid", "supervisor_id") VALUES ('2025-10-05 10:41:14.197642', 'MacBook-Pro-de-Anderson.local', 'Worker', '2025-10-05 10:41:14.194072', '{"polling_interval":0.1,"queues":"*","thread_pool_size":3}', 'worker-9cbf3c3101ed225ea037', 39514, 46) RETURNING "id" /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Create (1.6ms)[0m  [1m[32mINSERT INTO "solid_queue_processes" ("created_at", "hostname", "kind", "last_heartbeat_at", "metadata", "name", "pid", "supervisor_id") VALUES ('2025-10-05 10:41:14.195315', 'MacBook-Pro-de-Anderson.local', 'Dispatcher', '2025-10-05 10:41:14.190772', '{"polling_interval":1,"batch_size":500,"concurrency_maintenance_interval":600}', 'dispatcher-2c36bb9a9d5952675de2', 39513, 46) RETURNING "id" /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Register Worker (33.1ms)  pid: 39514, hostname: "MacBook-Pro-de-Anderson.local", process_id: 47, name: "worker-9cbf3c3101ed225ea037"
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Started Worker (33.9ms)  pid: 39514, hostname: "MacBook-Pro-de-Anderson.local", process_id: 47, name: "worker-9cbf3c3101ed225ea037", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Register Dispatcher (37.2ms)  pid: 39513, hostname: "MacBook-Pro-de-Anderson.local", process_id: 48, name: "dispatcher-2c36bb9a9d5952675de2"
+SolidQueue-1.2.1 Started Dispatcher (38.2ms)  pid: 39513, hostname: "MacBook-Pro-de-Anderson.local", process_id: 48, name: "dispatcher-2c36bb9a9d5952675de2", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+  [1m[36mSolidQueue::Semaphore Pluck (1.0ms)[0m  [1m[34mSELECT "solid_queue_semaphores"."id" FROM "solid_queue_semaphores" WHERE "solid_queue_semaphores"."expires_at" < '2025-10-05 10:41:14.229894' ORDER BY "solid_queue_semaphores"."id" ASC LIMIT 500 /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::BlockedExecution Pluck (0.9ms)[0m  [1m[34mSELECT DISTINCT "solid_queue_blocked_executions"."concurrency_key" FROM "solid_queue_blocked_executions" WHERE "solid_queue_blocked_executions"."expires_at" < '2025-10-05 10:41:14.240509' ORDER BY "solid_queue_blocked_executions"."concurrency_key" ASC LIMIT 500 /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Unblock jobs (3.5ms)  limit: 500, size: 0
+  [1m[36mSolidQueue::Job Load (0.7ms)[0m  [1m[34mSELECT "solid_queue_jobs".* FROM "solid_queue_jobs" WHERE "solid_queue_jobs"."id" = 9 LIMIT 1 /*application='Soundfy'*/[0m
+  [1m[36mShop Load (1.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."id" = 3 LIMIT 1 /*application='Soundfy'*/[0m
+  [1m[36mProduct Bulk Upsert (2.8ms)[0m  [1m[32mINSERT INTO "products" ("shopify_uuid","title","shop_id","created_at","updated_at") VALUES ('8338774458541', 'The Inventory Not Tracked Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774491309', 'Gift Card', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774524077', 'The Minimal Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774556845', 'The Videographer Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774589613', 'The Out of Stock Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774622381', 'The Archived Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774655149', 'Selling Plans Ski Wax', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774687917', 'The Draft Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774720685', 'The Collection Snowboard: Hydrogen', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774753453', 'The Hidden Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("products"."title" IS NOT DISTINCT FROM excluded."title") THEN "products".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:21:in 'Shopify::Products#import!'
+  [1m[36mProduct Load (6.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774458541' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.5ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979866861741', 'Default Title', 223, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774491309' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Bulk Upsert (5.1ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979866992813', '$10', 224, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867025581', '$25', 224, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867058349', '$50', 224, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867091117', '$100', 224, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774524077' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (0.9ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867123885', 'Default Title', 225, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774556845' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (0.9ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867189421', 'Default Title', 226, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774589613' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (0.8ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867156653', 'Default Title', 227, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774622381' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (0.8ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867222189', 'Default Title', 228, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774655149' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Bulk Upsert (0.9ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867451565', 'Selling Plans Ski Wax', 229, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867484333', 'Special Selling Plans Ski Wax', 229, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867549869', 'Sample Selling Plans Ski Wax', 229, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774687917' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.0ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867287725', 'Default Title', 230, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774720685' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.4ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867320493', 'Default Title', 231, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774753453' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.8ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867517101', 'Default Title', 232, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Bulk Upsert (3.6ms)[0m  [1m[32mINSERT INTO "products" ("shopify_uuid","title","shop_id","created_at","updated_at") VALUES ('8338774786221', 'The Compare at Price Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774818989', 'The Complete Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338774982829', 'The Collection Snowboard: Oxygen', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338775048365', 'The Multi-location Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338775146669', 'The Collection Snowboard: Liquid', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338775212205', 'The Multi-managed Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), ('8338775277741', 'The 3p Fulfilled Snowboard', 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("products"."title" IS NOT DISTINCT FROM excluded."title") THEN "products".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:21:in 'Shopify::Products#import!'
+  [1m[36mProduct Load (3.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774786221' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (3.2ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867254957', 'Default Title', 243, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (6.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774818989' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Bulk Upsert (2.7ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979867582637', 'Ice', 244, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867615405', 'Dawn', 244, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867648173', 'Powder', 244, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867680941', 'Electric', 244, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP), (3, '44979867713709', 'Sunset', 244, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338774982829' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (3.1ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979868369069', 'Default Title', 245, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338775048365' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.0ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979868500141', 'Default Title', 246, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338775146669' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.1ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979868532909', 'Default Title', 247, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338775212205' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (0.8ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979868696749', 'Default Title', 248, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."shop_id" = 3 AND "products"."shopify_uuid" = '8338775277741' LIMIT 1 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:32:in 'block in Shopify::Products#import!'
+  [1m[36mVariant Upsert (1.0ms)[0m  [1m[32mINSERT INTO "variants" ("shop_id","shopify_uuid","title","product_id","created_at","updated_at") VALUES (3, '44979868729517', 'Default Title', 249, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) ON CONFLICT ("shop_id","shopify_uuid") DO UPDATE SET updated_at=(CASE WHEN ("variants"."title" IS NOT DISTINCT FROM excluded."title") THEN "variants".updated_at ELSE CURRENT_TIMESTAMP END),"title"=excluded."title" RETURNING "id" /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  ↳ app/models/shopify/products.rb:50:in 'Shopify::Products#import_variants!'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  [1m[36mSolidQueue::Job Update (3.9ms)[0m  [1m[33mUPDATE "solid_queue_jobs" SET "updated_at" = '2025-10-05 10:41:35.882751', "finished_at" = '2025-10-05 10:41:35.882751' WHERE "solid_queue_jobs"."id" = 9 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  [1m[36mSolidQueue::ClaimedExecution Destroy (0.9ms)[0m  [1m[31mDELETE FROM "solid_queue_claimed_executions" WHERE "solid_queue_claimed_executions"."id" = 17 /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT /*application='Soundfy',job='Shopify%3A%3ASyncProductsJob'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Load (9.9ms)[0m  [1m[37mSELECT "solid_queue_processes".* FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 46 LIMIT 1 FOR UPDATE /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Update (5.1ms)[0m  [1m[33mUPDATE "solid_queue_processes" SET "last_heartbeat_at" = '2025-10-05 10:42:14.195919' WHERE "solid_queue_processes"."id" = 46 /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Load (7.3ms)[0m  [1m[37mSELECT "solid_queue_processes".* FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 47 LIMIT 1 FOR UPDATE /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Load (10.0ms)[0m  [1m[37mSELECT "solid_queue_processes".* FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 48 LIMIT 1 FOR UPDATE /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Update (2.5ms)[0m  [1m[33mUPDATE "solid_queue_processes" SET "last_heartbeat_at" = '2025-10-05 10:42:14.251360' WHERE "solid_queue_processes"."id" = 48 /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Update (1.6ms)[0m  [1m[33mUPDATE "solid_queue_processes" SET "last_heartbeat_at" = '2025-10-05 10:42:14.252964' WHERE "solid_queue_processes"."id" = 47 /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Destroy (1.5ms)[0m  [1m[31mDELETE FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 47 /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Destroy (1.5ms)[0m  [1m[31mDELETE FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 48 /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Deregister Dispatcher (3.0ms)  process_id: 48, pid: 39513, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-2c36bb9a9d5952675de2", last_heartbeat_at: "2025-10-05T10:42:14Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (3.2ms)  pid: 39513, hostname: "MacBook-Pro-de-Anderson.local", process_id: 48, name: "dispatcher-2c36bb9a9d5952675de2", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+  [1m[36mSolidQueue::ClaimedExecution Load (0.4ms)[0m  [1m[34mSELECT "solid_queue_claimed_executions".* FROM "solid_queue_claimed_executions" WHERE "solid_queue_claimed_executions"."process_id" = 47 /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Release claimed jobs (1.1ms)  size: 0
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Deregister Worker (4.4ms)  process_id: 47, pid: 39514, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-9cbf3c3101ed225ea037", last_heartbeat_at: "2025-10-05T10:42:14Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (4.7ms)  pid: 39514, hostname: "MacBook-Pro-de-Anderson.local", process_id: 47, name: "worker-9cbf3c3101ed225ea037", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (115.1ms)  process_id: 46, supervisor_pid: 39510, supervised_processes: [39513, 39514]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Destroy (5.2ms)[0m  [1m[31mDELETE FROM "solid_queue_processes" WHERE "solid_queue_processes"."id" = 46 /*application='Soundfy'*/[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT /*application='Soundfy'*/[0m
+  [1m[36mSolidQueue::Process Load (0.8ms)[0m  [1m[34mSELECT "solid_queue_processes".* FROM "solid_queue_processes" WHERE "solid_queue_processes"."supervisor_id" = 46 /*application='Soundfy'*/[0m
+SolidQueue-1.2.1 Deregister Supervisor (13.6ms)  process_id: 46, pid: 39510, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-5541291f516706a15de8", last_heartbeat_at: "2025-10-05T10:42:14Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (13.9ms)  pid: 39510, hostname: "MacBook-Pro-de-Anderson.local", process_id: 46, name: "supervisor-5541291f516706a15de8"
+SolidQueue-1.2.1 Register Supervisor (51.7ms)  pid: 40775, hostname: "MacBook-Pro-de-Anderson.local", process_id: 49, name: "supervisor-5b13b371294f79cf4dbf"
+SolidQueue-1.2.1 Fail claimed jobs (4.6ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (71.7ms)  pid: 40775, hostname: "MacBook-Pro-de-Anderson.local", process_id: 49, name: "supervisor-5b13b371294f79cf4dbf"
+SolidQueue-1.2.1 Prune dead processes (12.3ms)  size: 0
+SolidQueue-1.2.1 Register Dispatcher (32.2ms)  pid: 40776, hostname: "MacBook-Pro-de-Anderson.local", process_id: 51, name: "dispatcher-a076a988935330b12c1d"
+SolidQueue-1.2.1 Register Worker (30.1ms)  pid: 40777, hostname: "MacBook-Pro-de-Anderson.local", process_id: 50, name: "worker-6c5f7861b7f62af101a7"
+SolidQueue-1.2.1 Started Worker (31.0ms)  pid: 40777, hostname: "MacBook-Pro-de-Anderson.local", process_id: 50, name: "worker-6c5f7861b7f62af101a7", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (33.7ms)  pid: 40776, hostname: "MacBook-Pro-de-Anderson.local", process_id: 51, name: "dispatcher-a076a988935330b12c1d", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (5.6ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (17.5ms)  process_id: 50, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveRecord::RecordInvalid Validation failed: Shopify uuid has already been taken, Title can't be blank"
+SolidQueue-1.2.1 Claim jobs (5.1ms)  process_id: 50, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveRecord::PreparedStatementInvalid wrong number of bind variables (1 for #<Arel::Nodes::Count:0x000000012b7efed8>) in: ? SKIP LOCKED"
+SolidQueue-1.2.1 Claim jobs (7.9ms)  process_id: 50, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveRecord::PreparedStatementInvalid wrong number of bind variables (1 for #<Arel::Nodes::Count:0x000000012b3c7400>) in: ? SKIP LOCKED"
+SolidQueue-1.2.1 Deregister Dispatcher (16.4ms)  process_id: 51, pid: 40776, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-a076a988935330b12c1d", last_heartbeat_at: "2025-10-05T10:44:35Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (17.4ms)  pid: 40776, hostname: "MacBook-Pro-de-Anderson.local", process_id: 51, name: "dispatcher-a076a988935330b12c1d", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.0ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (19.7ms)  process_id: 50, pid: 40777, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-6c5f7861b7f62af101a7", last_heartbeat_at: "2025-10-05T10:44:35Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (27.0ms)  pid: 40777, hostname: "MacBook-Pro-de-Anderson.local", process_id: 50, name: "worker-6c5f7861b7f62af101a7", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (127.8ms)  process_id: 49, supervisor_pid: 40775, supervised_processes: [40776, 40777]
+SolidQueue-1.2.1 Deregister Supervisor (26.8ms)  process_id: 49, pid: 40775, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-5b13b371294f79cf4dbf", last_heartbeat_at: "2025-10-05T10:44:35Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (27.9ms)  pid: 40775, hostname: "MacBook-Pro-de-Anderson.local", process_id: 49, name: "supervisor-5b13b371294f79cf4dbf"
+SolidQueue-1.2.1 Register Supervisor (52.2ms)  pid: 43113, hostname: "MacBook-Pro-de-Anderson.local", process_id: 52, name: "supervisor-fd4b0b6cf5f361fbacda"
+SolidQueue-1.2.1 Fail claimed jobs (4.0ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (70.3ms)  pid: 43113, hostname: "MacBook-Pro-de-Anderson.local", process_id: 52, name: "supervisor-fd4b0b6cf5f361fbacda"
+SolidQueue-1.2.1 Prune dead processes (6.8ms)  size: 0
+SolidQueue-1.2.1 Register Worker (33.1ms)  pid: 43115, hostname: "MacBook-Pro-de-Anderson.local", process_id: 53, name: "worker-eed2b6d700c09c47e006"
+SolidQueue-1.2.1 Started Worker (34.2ms)  pid: 43115, hostname: "MacBook-Pro-de-Anderson.local", process_id: 53, name: "worker-eed2b6d700c09c47e006", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Register Dispatcher (36.6ms)  pid: 43114, hostname: "MacBook-Pro-de-Anderson.local", process_id: 54, name: "dispatcher-93f4c86537b53e0d5dc6"
+SolidQueue-1.2.1 Started Dispatcher (37.5ms)  pid: 43114, hostname: "MacBook-Pro-de-Anderson.local", process_id: 54, name: "dispatcher-93f4c86537b53e0d5dc6", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.0ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (23.6ms)  process_id: 53, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Error in thread (0.0ms)  error: "ActiveRecord::PreparedStatementInvalid wrong number of bind variables (1 for #<Arel::Nodes::Count:0x0000000126aff768>) in: ? SKIP LOCKED"
+SolidQueue-1.2.1 Deregister Dispatcher (18.7ms)  process_id: 54, pid: 43114, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-93f4c86537b53e0d5dc6", last_heartbeat_at: "2025-10-05T10:44:54Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (20.0ms)  pid: 43114, hostname: "MacBook-Pro-de-Anderson.local", process_id: 54, name: "dispatcher-93f4c86537b53e0d5dc6", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Release claimed jobs (2.0ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (19.9ms)  process_id: 53, pid: 43115, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-eed2b6d700c09c47e006", last_heartbeat_at: "2025-10-05T10:44:54Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Worker (22.7ms)  pid: 43115, hostname: "MacBook-Pro-de-Anderson.local", process_id: 53, name: "worker-eed2b6d700c09c47e006", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Supervisor terminated gracefully (120.7ms)  process_id: 52, supervisor_pid: 43113, supervised_processes: [43114, 43115]
+SolidQueue-1.2.1 Deregister Supervisor (21.4ms)  process_id: 52, pid: 43113, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-fd4b0b6cf5f361fbacda", last_heartbeat_at: "2025-10-05T10:44:54Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (24.6ms)  pid: 43113, hostname: "MacBook-Pro-de-Anderson.local", process_id: 52, name: "supervisor-fd4b0b6cf5f361fbacda"
+SolidQueue-1.2.1 Register Supervisor (50.4ms)  pid: 43489, hostname: "MacBook-Pro-de-Anderson.local", process_id: 55, name: "supervisor-9b32be41b84c4dbf7dd8"
+SolidQueue-1.2.1 Fail claimed jobs (3.9ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (69.2ms)  pid: 43489, hostname: "MacBook-Pro-de-Anderson.local", process_id: 55, name: "supervisor-9b32be41b84c4dbf7dd8"
+SolidQueue-1.2.1 Prune dead processes (8.1ms)  size: 0
+SolidQueue-1.2.1 Register Worker (27.1ms)  pid: 43491, hostname: "MacBook-Pro-de-Anderson.local", process_id: 57, name: "worker-25991c56c2107c77bc73"
+SolidQueue-1.2.1 Register Dispatcher (30.2ms)  pid: 43490, hostname: "MacBook-Pro-de-Anderson.local", process_id: 56, name: "dispatcher-242fa7c427d0f0282ed0"
+SolidQueue-1.2.1 Started Worker (28.0ms)  pid: 43491, hostname: "MacBook-Pro-de-Anderson.local", process_id: 57, name: "worker-25991c56c2107c77bc73", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (31.3ms)  pid: 43490, hostname: "MacBook-Pro-de-Anderson.local", process_id: 56, name: "dispatcher-242fa7c427d0f0282ed0", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (3.6ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (14.7ms)  process_id: 57, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Fail claimed jobs (84.2ms)  job_ids: [10], process_ids: [57]
+SolidQueue-1.2.1 Release claimed jobs (1.4ms)  size: 0
+SolidQueue-1.2.1 Deregister Worker (5.3ms)  process_id: 57, pid: 43491, hostname: "MacBook-Pro-de-Anderson.local", name: "worker-25991c56c2107c77bc73", last_heartbeat_at: "2025-10-05T10:45:19Z", claimed_size: nil, pruned: true
+SolidQueue-1.2.1 Prune dead processes (134.6ms)  size: 1
+SolidQueue-1.2.1 Deregister Dispatcher (12.4ms)  process_id: 56, pid: 43490, hostname: "MacBook-Pro-de-Anderson.local", name: "dispatcher-242fa7c427d0f0282ed0", last_heartbeat_at: "2025-10-05T10:50:19Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Dispatcher (13.3ms)  pid: 43490, hostname: "MacBook-Pro-de-Anderson.local", process_id: 56, name: "dispatcher-242fa7c427d0f0282ed0", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Supervisor terminated immediately (0.1ms)  process_id: 55, supervisor_pid: 43489, supervised_processes: [43491]
+SolidQueue-1.2.1 Supervisor wasn't terminated gracefully - shutdown timeout exceeded (5085.6ms)  process_id: 55, supervisor_pid: 43489, supervised_processes: [43490, 43491]
+SolidQueue-1.2.1 Supervisor terminated gracefully (111.7ms)  process_id: 55, supervisor_pid: 43489, supervised_processes: [43491]
+SolidQueue-1.2.1 Deregister Supervisor (20.8ms)  process_id: 55, pid: 43489, hostname: "MacBook-Pro-de-Anderson.local", name: "supervisor-9b32be41b84c4dbf7dd8", last_heartbeat_at: "2025-10-05T10:50:19Z", claimed_size: nil, pruned: false
+SolidQueue-1.2.1 Shutdown Supervisor (21.5ms)  pid: 43489, hostname: "MacBook-Pro-de-Anderson.local", process_id: 55, name: "supervisor-9b32be41b84c4dbf7dd8"
+SolidQueue-1.2.1 Register Supervisor (60.6ms)  pid: 48696, hostname: "MacBook-Pro-de-Anderson.local", process_id: 58, name: "supervisor-8aeb7a34bc24cb558b19"
+SolidQueue-1.2.1 Fail claimed jobs (6.0ms)  job_ids: [], process_ids: []
+SolidQueue-1.2.1 Started Supervisor (82.7ms)  pid: 48696, hostname: "MacBook-Pro-de-Anderson.local", process_id: 58, name: "supervisor-8aeb7a34bc24cb558b19"
+SolidQueue-1.2.1 Prune dead processes (11.7ms)  size: 0
+SolidQueue-1.2.1 Register Worker (44.1ms)  pid: 48803, hostname: "MacBook-Pro-de-Anderson.local", process_id: 59, name: "worker-2ecf837fa136b2637ed9"
+SolidQueue-1.2.1 Register Dispatcher (48.6ms)  pid: 48802, hostname: "MacBook-Pro-de-Anderson.local", process_id: 60, name: "dispatcher-8bc82c3f90214d9b86ae"
+SolidQueue-1.2.1 Started Worker (45.6ms)  pid: 48803, hostname: "MacBook-Pro-de-Anderson.local", process_id: 59, name: "worker-2ecf837fa136b2637ed9", polling_interval: 0.1, queues: "*", thread_pool_size: 3
+SolidQueue-1.2.1 Started Dispatcher (49.8ms)  pid: 48802, hostname: "MacBook-Pro-de-Anderson.local", process_id: 60, name: "dispatcher-8bc82c3f90214d9b86ae", polling_interval: 1, batch_size: 500, concurrency_maintenance_interval: 600
+SolidQueue-1.2.1 Unblock jobs (4.8ms)  limit: 500, size: 0
+SolidQueue-1.2.1 Claim jobs (46.9ms)  process_id: 59, job_ids: [10], claimed_job_ids: [10], size: 1
+SolidQueue-1.2.1 Prune dead processes (12.9ms)  size: 0
+SolidQueue-1.2.1 Prune dead processes (17.3ms)  size: 0
+SolidQueue-1.2.1 Unblock jobs (10.7ms)  limit: 500, size: 0

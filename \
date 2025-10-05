@@ -2,8 +2,9 @@ class ApplicationJob < ActiveJob::Base
   self.enqueue_after_transaction_commit = true
 
   retry_on ApplicationRecord::RecordLocked, wait: :polynomially_longer, attempts: :unlimited
-  retry_on ShopifyGraphql::APIError, wait: :polynomially_longer, attempts: 10
+
+  retry_on ApplicationRecord::RecordLocked, wait: :polynomially_longer, attempts: 10
 
   # Most jobs are safe to ignore if the underlying records are no longer available
-  discard_on ActiveJob::DeserializationError
+  # discard_on ActiveJob::DeserializationError
 end
