@@ -14,14 +14,16 @@ class Shopify::Products
     product_records = api_products.map { |api_product|
       {
         shopify_uuid: GlobalID.parse(api_product.id).model_id,
-        title: api_product.title
+        title: api_product.title,
+        status: api_product.status&.downcase,
+        image_url: api_product.featured_image&.url
       }
     }
 
     @shop.products.upsert_all(
       product_records,
       record_timestamps: true,
-      update_only: %i[title],
+      update_only: %i[title status image_url],
       unique_by: %i[shop_id shopify_uuid]
     )
 

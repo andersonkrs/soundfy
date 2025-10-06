@@ -2,6 +2,8 @@ class Variant < ApplicationRecord
   belongs_to :shop
   belongs_to :product
 
+  DEFAULT_TITLE = "Default Title".freeze
+
   # Scope for regular variants (not STI subclasses)
   scope :regular, -> { where(type: nil) }
   scope :active, -> { where(discarded_at: nil) }

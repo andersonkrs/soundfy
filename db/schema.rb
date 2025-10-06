@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_10_04_023453) do
+ActiveRecord::Schema[8.1].define(version: 2025_10_05_130610) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -44,12 +44,15 @@ ActiveRecord::Schema[8.1].define(version: 2025_10_04_023453) do
   create_table "products", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "discarded_at"
+    t.string "image_url"
     t.bigint "shop_id", null: false
     t.string "shopify_uuid", null: false
+    t.string "status"
     t.string "title"
     t.datetime "updated_at", null: false
     t.index ["shop_id", "shopify_uuid"], name: "index_products_on_shop_id_and_shopify_uuid", unique: true
     t.index ["shop_id"], name: "index_products_on_shop_id"
+    t.check_constraint "status IS NULL OR (status::text = ANY (ARRAY['active'::character varying, 'archived'::character varying, 'draft'::character varying, 'unlisted'::character varying]::text[]))", name: "check_products_status"
   end
 
   create_table "shops", force: :cascade do |t|

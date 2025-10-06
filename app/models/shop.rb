@@ -5,7 +5,7 @@ class Shop < ApplicationRecord
   include Shopify::Collectionable
   include Shopify::Productable
 
-  has_many :recordings, as: :recordable, dependent: :destroy
+  has_many :recordings, dependent: :destroy
 
   encrypts :shopify_domain, deterministic: true, downcase: true
   encrypts :shopify_token

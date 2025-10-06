@@ -4,12 +4,15 @@ class Product < ApplicationRecord
   has_many :variants, dependent: :destroy
   has_many :recordings, -> { where(type: "Recording") }, class_name: "Recording"
 
-  scope :active, -> { where(discarded_at: nil) }
+  enum :status, [:active, :archived, :draft, :unlisted].index_with(&:itself)
+
+  # Scopes for discarded state (separate from status)
+  scope :kept, -> { where(discarded_at: nil) }
   scope :discarded, -> { where.not(discarded_at: nil) }
 
   def discard!
     update!(discarded_at: Time.current)
-    product.variants.update_all(discarded_at: product.discarded_at)
+    product.variants.update_all(discarded_at: product.discarded_at, updated_at: Time.current)
   end
 
   def discarded?

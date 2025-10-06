@@ -89,6 +89,52 @@ Access with: `bin/rails credentials:edit`
 4. Vite provides hot module replacement for rapid development
 5. Shopify app runs embedded in the Shopify admin
 
+### Inertia.js Conventions
+
+**IMPORTANT**: When passing props from Rails controllers to React components via Inertia.js:
+- **Always use snake_case** for property names (Ruby convention)
+- **DO NOT camelize** property names (e.g., use `created_at` not `createdAt`)
+- React components should access props using snake_case (e.g., `recording.product_id`)
+- **Use Jbuilder templates** to render props instead of manually mapping in controllers
+
+#### Using Jbuilder Templates with Inertia.js
+
+Create a Jbuilder template with the same path as your Inertia view:
+
+**Controller** (`app/controllers/shopify/recordings_controller.rb`):
+```ruby
+class Shopify::RecordingsController < Shopify::AuthenticatedController
+  def index
+    @recordings = Current.shop.recordings.active
+    render inertia: "Recordings/Index"
+  end
+end
+```
+
+**Jbuilder Template** (`app/views/shopify/recordings/index.json.jbuilder`):
+```ruby
+json.recordings @recordings do |recording|
+  json.id recording.id
+  json.product_id recording.product_id
+  json.product_title recording.product&.title
+  json.created_at recording.created_at.iso8601
+end
+```
+
+**React Component** (`app/frontend/pages/Recordings/Index.jsx`):
+```jsx
+export default function RecordingsIndex({ recordings }) {
+  // Access props using snake_case
+  recordings.map(r => r.product_id)
+}
+```
+
+Benefits of Jbuilder templates:
+- Cleaner controllers (separation of concerns)
+- Reusable JSON structure
+- Easier to maintain and test
+- Consistent API responses
+
 ## Important Notes
 
 - Always ensure proper Shopify session verification in controllers

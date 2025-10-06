@@ -8,8 +8,8 @@ function Layout({ children }) {
         <Link href="/shopify/home" rel="home" target="_top">
           Home
         </Link>
-        <Link href="/shopify/warranties" target="_top">
-          Warranties
+        <Link href="/shopify/recordings" target="_top">
+          Recordings
         </Link>
       </NavMenu>
       {children}

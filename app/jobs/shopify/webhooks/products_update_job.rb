@@ -9,6 +9,12 @@ class Shopify::Webhooks::ProductsUpdateJob < ApplicationJob
     return if product.discarded?
 
     product.with_non_blocking_lock!("FOR NO KEY UPDATE SKIP LOCKED") do
+      # Update product attributes
+      product.title = webhook["title"]
+      product.status = webhook["status"]&.downcase
+      product.image_url = webhook.dig("image", "src") || webhook.dig("images", 0, "src")
+      product.save!(validate: false)
+
       if webhook["variants"].present?
         variant_records = webhook["variants"].map { |variant_data|
           {

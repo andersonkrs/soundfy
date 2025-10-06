@@ -10,6 +10,12 @@ class Recording < Variant
   scope :active, -> { where(archived_at: nil) }
   scope :archived, -> { where.not(archived_at: nil) }
 
+  def title
+    return product.title if super == DEFAULT_TITLE
+
+    "#{product.title} - #{super}"
+  end
+
   # Archival methods
   def archived?
     archived_at.present?

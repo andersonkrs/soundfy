@@ -8,6 +8,8 @@ class Shopify::Webhooks::ProductsCreateJob < ApplicationJob
       return if product.discarded?
 
       product.title = webhook["title"]
+      product.status = webhook["status"]&.downcase
+      product.image_url = webhook.dig("image", "src") || webhook.dig("images", 0, "src")
       product.save!(validate: false)
 
       if webhook["variants"].present?

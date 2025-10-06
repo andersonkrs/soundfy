@@ -18,6 +18,10 @@ class GetProductsQuery
         nodes {
           id
           title
+          status
+          featuredImage {
+            url
+          }
           variants(first: 100) {
             nodes {
               id
