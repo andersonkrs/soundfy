@@ -34,7 +34,7 @@ Rails.application.configure do
   config.solid_queue.connects_to = {database: {writing: :queue}}
 
   stdout_logger = ActiveSupport::Logger.new($stdout)
-  file_logger = ActiveSupport::Logger.new("development.log")
+  file_logger = ActiveSupport::Logger.new(config.root.join("tmp/development.log"))
   config.solid_queue.logger = ActiveSupport::BroadcastLogger.new(stdout_logger, file_logger)
   config.solid_queue.silence_polling = true
 
