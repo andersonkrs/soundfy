@@ -21,7 +21,7 @@ createInertiaApp({
 
     const page = pages[`../pages/${name}.jsx`];
     if (!page) {
-      console.error(`Missing Inertia page component: '${name}.jsx'`);
+      throw new Error(`Missing Inertia page component: '${name}.jsx'`);
     }
     page.default.layout ||= (page) => createElement(Layout, null, page);
 

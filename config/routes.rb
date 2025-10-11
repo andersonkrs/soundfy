@@ -14,8 +14,6 @@ Rails.application.routes.draw do
 
     resources :recordings, only: %i[index]
 
-    # resources :warranties, only: %i[index]
-
     namespace :webhooks do
       # Compliance webhooks
       post "app_uninstalled", to: "app_uninstalled#receive"

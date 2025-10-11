@@ -1,9 +1,8 @@
-import React from "react";
 import { Head, router } from "@inertiajs/react";
 import { AppProvider, Page, Card, Text, BlockStack } from "@shopify/polaris";
 import enTranslations from "@shopify/polaris/locales/en.json";
 
-export default function Home({ shopOrigin, host }) {
+export default function Home() {
   return (
     <AppProvider i18n={enTranslations}>
       <Head title="Soundfy - Home" />
@@ -11,8 +10,8 @@ export default function Home({ shopOrigin, host }) {
         title="Welcome to Soundfy"
         primaryAction={{
           target: "_top",
-          content: "Warranties",
-          onAction: () => router.visit("/shopify/warranties"),
+          content: "Test",
+          onAction: () => router.visit("/shopify/recordings")
         }}
       >
         <BlockStack gap="500">
@@ -24,9 +23,6 @@ export default function Home({ shopOrigin, host }) {
               <Text variant="bodyMd" as="p">
                 Welcome to your Shopify app! This is your home page built with
                 Shopify Polaris components.
-              </Text>
-              <Text variant="bodyMd" as="p" tone="subdued">
-                Connected to shop: {shopOrigin}
               </Text>
             </BlockStack>
           </Card>
