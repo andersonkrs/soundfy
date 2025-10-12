@@ -5,7 +5,8 @@
   },
   "development": {
     "autoBuild": true,
-    "host": "vite.soundfy.localhost",
+    "host": "localhost",
+    "assetHost": "https://assets.soundfy.app",
     "publicOutputDir": "vite-dev",
     "port": 3036
   },

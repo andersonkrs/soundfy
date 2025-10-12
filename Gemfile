@@ -41,7 +41,6 @@ gem "thruster", require: false
 
 # Frontend
 gem "inertia_rails"
-gem "inertia_rails-contrib"
 gem "vite_rails", "~> 3.0"
 
 # Safely run postgres migrations

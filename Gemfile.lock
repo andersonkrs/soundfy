@@ -142,8 +142,6 @@ GEM
       railties (>= 6.0.0)
     inertia_rails (3.11.0)
       railties (>= 6)
-    inertia_rails-contrib (0.5.1)
-      inertia_rails (>= 3.5.0)
     io-console (0.8.1)
     irb (1.15.2)
       pp (>= 0.6.0)
@@ -449,7 +447,6 @@ DEPENDENCIES
   capybara
   debug
   inertia_rails
-  inertia_rails-contrib
   jbuilder
   kamal
   mission_control-jobs

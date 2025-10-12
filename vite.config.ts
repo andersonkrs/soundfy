@@ -5,11 +5,11 @@ import ViteRails from 'vite-plugin-rails'
 export default defineConfig({
   plugins: [react(), ViteRails()],
   server: {
-    allowedHosts: ['vite.soundfy.localhost'],
+    allowedHosts: ['assets.soundfy.app'],
     hmr: {
-      protocol: 'ws',
-      host: 'vite.soundfy.localhost',
-      clientPort: 3036
+      protocol: 'wss',
+      host: 'assets.soundfy.app',
+      clientPort: 443
     }
   },
 })
