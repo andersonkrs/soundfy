@@ -1,5 +1,7 @@
 class Recording < Variant
   belongs_to :recordable, polymorphic: true, optional: true
+  belongs_to :product, optional: true
+  belongs_to :shop, optional: true
 
   delegated_type :recordable, types: %w[SingleTrack Album AlbumTrack], optional: true
 
@@ -9,6 +11,10 @@ class Recording < Variant
   scope :tracks, -> { where(recordable_type: "AlbumTrack") }
   scope :active, -> { where(archived_at: nil) }
   scope :archived, -> { where.not(archived_at: nil) }
+
+  def build_recordable(...)
+    shop.build_recordable(...)
+  end
 
   def title
     return product.title if super == DEFAULT_TITLE

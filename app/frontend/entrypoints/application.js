@@ -30,18 +30,12 @@ import { router } from "@inertiajs/react";
 
 // Listen for Inertia requests and attach sessionToken to Authorization header
 router.on("before", (event) => {
-  // Add Authorization header
+  // Add Authorization header with JWT session token
+  // The token contains shop domain, so query params are not needed
   event.detail.visit.headers = {
     ...event.detail.visit.headers,
     Authorization: `Bearer ${window.sessionToken}`,
   };
-
-  // Add Shopify embedded app query parameters
-  if (window.shopify?.config) {
-    event.detail.visit.url.searchParams.set("shop", window.shopify.config.shop);
-    event.detail.visit.url.searchParams.set("host", window.shopify.config.host);
-    event.detail.visit.url.searchParams.set("embedded", "1");
-  }
 });
 
 const SESSION_TOKEN_REFRESH_INTERVAL = 2000; // Request a new token every 2s

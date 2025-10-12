@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :shopify do
     get "/home", to: "home#index"
 
-    resources :recordings, only: %i[index]
+    resources :recordings, only: %i[index new create]
 
     namespace :webhooks do
       # Compliance webhooks

@@ -12,7 +12,7 @@ import {
   Thumbnail,
   Pagination,
   BlockStack,
-  InlineStack
+  InlineStack,
 } from '@shopify/polaris'
 import { ImageIcon } from '@shopify/polaris-icons'
 import enTranslations from '@shopify/polaris/locales/en.json'
@@ -42,7 +42,7 @@ export default function RecordingsIndex({ recordings, pagy }) {
       'Album': { tone: 'success', text: 'Album' },
       'AlbumTrack': { tone: 'attention', text: 'Album Track' }
     }
-    
+
     const config = badgeConfig[type] || { tone: 'default', text: type }
     return <Badge tone={config.tone} size="small">{config.text}</Badge>
   }
@@ -97,6 +97,10 @@ export default function RecordingsIndex({ recordings, pagy }) {
       <Page
         title='Recordings'
         subtitle='Manage your audio products'
+        primaryAction={{
+          onAction: () => router.visit('/shopify/recordings/new'),
+          content: 'Add Recording',
+        }}
       >
         <Layout>
           <Layout.Section>
@@ -105,7 +109,7 @@ export default function RecordingsIndex({ recordings, pagy }) {
                 {emptyState}
               </Card>
             ) : (
-               <Card padding="0">
+              <Card padding="0">
                 <IndexTable
                   resourceName={resourceName}
                   itemCount={recordings.length}
@@ -125,7 +129,7 @@ export default function RecordingsIndex({ recordings, pagy }) {
               </Card>
             )}
           </Layout.Section>
-          
+
           {recordings.length > 0 && (
             <Layout.Section>
               <BlockStack gap="400">
