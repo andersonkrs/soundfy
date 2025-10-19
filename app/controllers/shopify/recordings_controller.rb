@@ -1,4 +1,6 @@
 class Shopify::RecordingsController < Shopify::AuthenticatedController
+  include AudioValidations
+
   def index
     recordings_scope = Current.shop
       .recordings
@@ -18,7 +20,10 @@ class Shopify::RecordingsController < Shopify::AuthenticatedController
   end
 
   def new
-    render inertia: "Recordings/New"
+    render inertia: "Recordings/New", props: {
+      allowed_content_types: allowed_content_types,
+      allowed_extensions: allowed_audio_extensions
+    }
   end
 
   def create

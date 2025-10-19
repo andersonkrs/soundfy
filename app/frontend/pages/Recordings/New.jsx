@@ -5,50 +5,28 @@ import {
   Layout,
   Card,
   FormLayout,
-  TextField,
   Banner,
-  Button,
   Text,
   BlockStack,
-  InlineStack,
+  DropZone,
+  Thumbnail,
+  ResourceList,
+  ResourceItem,
 } from '@shopify/polaris'
 import { SaveBar, useAppBridge } from '@shopify/app-bridge-react'
 import enTranslations from '@shopify/polaris/locales/en.json'
+import { useState, useCallback } from 'react'
+import { NoteIcon, DeleteIcon, SearchIcon } from '@shopify/polaris-icons'
+import { RecordingsNewProvider, useRecordingsNewContext } from './New/Context'
+import { ProductField } from './New/ProductField'
 
-export default function RecordingsNew() {
+function RecordingsNewPage({ allowed_content_types = [], allowed_extensions = [] }) {
+  const { form, uploading, setUploading } =
+    useRecordingsNewContext()
+
   const shopify = useAppBridge()
 
-  const { data, setData, post, processing, errors } = useForm({
-    recordable: {
-      title: '',
-      variant_gid: null,
-    },
-    // UI-only fields (not sent to backend)
-    variant_title: '',
-    product_title: '',
-  })
-
-  const handleVariantSelection = async () => {
-    const selected = await shopify.resourcePicker({
-      type: 'variant',
-      multiple: false,
-    })
-
-    if (selected && selected.length > 0) {
-      const variant = selected[0]
-      setData({
-        ...data,
-        recordable: {
-          ...data.recordable,
-          variant_gid: variant.id,
-          title: data.recordable.title || variant.title,
-        },
-        variant_title: variant.title,
-        product_title: variant.productTitle,
-      })
-      shopify.saveBar.show('recording-save-bar')
-    }
-  }
+  const { setData, post, processing, errors, data } = form
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -66,11 +44,56 @@ export default function RecordingsNew() {
     router.visit('/shopify/recordings')
   }
 
+  const handleDropZoneDrop = useCallback(
+    async (_dropFiles, acceptedFiles, _rejectedFiles) => {
+      if (acceptedFiles.length === 0) return
+
+      const file = acceptedFiles[0]
+      setData((prevData) => ({ ...prevData, blob: null }))
+
+      setUploading(true)
+      try {
+        // Get CSRF token from meta tag
+        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.content
+
+        // Upload to our custom endpoint
+        const formData = new FormData()
+        formData.append('file', file)
+
+        const response = await fetch('/shopify/audio_uploads', {
+          method: 'POST',
+          headers: {
+            'X-CSRF-Token': csrfToken,
+          },
+          body: formData,
+        })
+
+        if (!response.ok) {
+          const errorData = await response.json()
+          throw new Error(errorData.error || 'Upload failed')
+        }
+
+        const data = await response.json()
+        setData((prevData) => ({ ...prevData, blob: data.blob }))
+        shopify.toast.show('File uploaded')
+      } catch (error) {
+        shopify.toast.show(error.message || 'Upload failed', { isError: true })
+      } finally {
+        setUploading(false)
+      }
+    },
+    [shopify, setData, setUploading]
+  )
+
+  const handleRemoveFile = useCallback(() => {
+    setData((prevData) => ({ ...prevData, blob: null }))
+  }, [])
+
   return (
     <AppProvider i18n={enTranslations}>
       <Head title='New Recording' />
       <Page
-        title='Create Recording'
+        title='Add Recording'
         backAction={{
           content: 'Recordings',
           onAction: () => {
@@ -95,48 +118,95 @@ export default function RecordingsNew() {
                 </ul>
               </Banner>
             )}
+          </Layout.Section>
+
+          <Layout.Section>
 
             <Card>
               <form onSubmit={handleSubmit} onChange={() => shopify.saveBar.show('recording-save-bar')}>
                 <FormLayout>
-                  <BlockStack gap="400">
-                    <Text variant="headingMd" as="h2">Product Variant</Text>
+                  <Text variant="headingMd" as="h2">Audio File</Text>
 
-                    {data.recordable.variant_gid ? (
-                      <BlockStack gap="200">
-                        <InlineStack align="space-between" blockAlign="center">
-                          <BlockStack gap="100">
-                            <Text variant="bodyMd" as="p" fontWeight="semibold">
-                              {data.product_title}
-                            </Text>
-                            <Text variant="bodySm" as="p" tone="subdued">
-                              {data.variant_title}
-                            </Text>
-                          </BlockStack>
-                          <Button onClick={handleVariantSelection}>
-                            Change variant
-                          </Button>
-                        </InlineStack>
-                      </BlockStack>
-                    ) : (
-                      <Button onClick={handleVariantSelection}>
-                        Select product variant
-                      </Button>
-                    )}
-                  </BlockStack>
+                  {!data.blob && (
+                    <DropZone
+                      accept={allowed_content_types.join(',')}
+                      type="file"
+                      onDrop={handleDropZoneDrop}
+                      disabled={uploading}
+                      allowMultiple={false}
+                      labelAction="Add file"
+                    >
+                      <DropZone.FileUpload actionTitle="Add file" actionHint={`Drag and drop your songs, podcasts, or any audio file here`} />
+                    </DropZone>
+                  )}
 
-                  <TextField
-                    label="Title"
-                    value={data.recordable.title}
-                    onChange={(value) => setData('recordable', { ...data.recordable, title: value })}
-                    error={errors['recordable.title']}
-                    autoComplete="off"
-                    helpText="Enter a title for your recording (defaults to variant title)"
-                  />
+                  {!uploading && data.blob && (
+                    <ResourceList
+                      resourceName={{ singular: 'file', plural: 'files' }}
+                      items={[data.blob]}
+                      renderItem={(item) => {
+                        const { filename, human_size, cover_art, artist, title } = item
+                        const media = (
+                          <Thumbnail
+                            source={cover_art || NoteIcon}
+                            alt={filename}
+                            size="medium"
+                          />
+                        )
+
+                        return (
+                          <ResourceItem
+                            id={filename}
+                            media={media}
+                            align="center"
+                            verticalAlignment='center'
+                            persistActions
+                            accessibilityLabel={`View details for ${filename}`}
+                            shortcutActions={[
+                              {
+                                content: 'Remove',
+                                icon: DeleteIcon,
+                                onAction: handleRemoveFile,
+                              },
+                            ]}
+                          >
+                            <Text variant="bodyMd" fontWeight="bold" as="h3">
+                              {filename}
+                            </Text>
+                            {artist && title && <Text variant="bodyxs" as="p">{artist} - {title}</Text>}
+                            <Text variant="bodyXs" as="p" tone="subdued">
+                              {human_size}
+                            </Text>
+                          </ResourceItem>
+                        )
+                      }}
+                    />
+                  )}
+
+                  <ProductField />
                 </FormLayout>
               </form>
             </Card>
           </Layout.Section>
+
+          {data.blob && (
+            <Layout.Section>
+              <Card>
+                <BlockStack gap="400">
+                  <Text variant="headingMd" as="h2">Upload Response</Text>
+                  <pre style={{
+                    background: '#f6f6f7',
+                    padding: '16px',
+                    borderRadius: '8px',
+                    overflow: 'auto',
+                    fontSize: '12px'
+                  }}>
+                    {JSON.stringify(data.blob, null, 2)}
+                  </pre>
+                </BlockStack>
+              </Card>
+            </Layout.Section>
+          )}
         </Layout>
 
         <SaveBar id="recording-save-bar">
@@ -145,5 +215,13 @@ export default function RecordingsNew() {
         </SaveBar>
       </Page>
     </AppProvider>
+  )
+}
+
+export default function RecordingsNew(props) {
+  return (
+    <RecordingsNewProvider>
+      <RecordingsNewPage {...props} />
+    </RecordingsNewProvider>
   )
 }

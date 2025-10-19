@@ -6,7 +6,8 @@
   },
   "extends": [
     "standard",
-    "standard-jsx"
+    "standard-jsx",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -16,7 +17,8 @@
     }
   },
   "plugins": [
-    "react"
+    "react",
+    "prettier"
   ],
   "settings": {
     "react": {
@@ -26,7 +28,8 @@
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "camelcase": "off"
+    "camelcase": "off",
+    "prettier/prettier": "error"
   },
   "ignorePatterns": [
     "vendor/",

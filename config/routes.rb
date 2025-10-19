@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get "/home", to: "home#index"
 
     resources :recordings, only: %i[index new create]
+    post "audio_uploads", to: "audio_uploads#create"
 
     namespace :webhooks do
       # Compliance webhooks

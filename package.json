@@ -2,11 +2,15 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
     "vite": "^7.1.6",
     "vite-plugin-ruby": "^5.1.1"
   },
   "dependencies": {
     "@inertiajs/react": "^2.1.7",
+    "@rails/activestorage": "^8.0.300",
     "@shopify/app-bridge-react": "^4.2.3",
     "@shopify/cli": "^3.85.4",
     "@shopify/polaris": "^13.9.5",
@@ -14,6 +18,7 @@
     "@vitejs/plugin-react": "^5.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "use-debounce": "^10.0.6",
     "vite-plugin-rails": "^0.5.0"
   },
   "engines": {
@@ -22,6 +27,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "deploy": "shopify app deploy --config=development"
   }
 }

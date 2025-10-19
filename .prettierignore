@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+public/vite-dev/
+public/vite/
+tmp/
+
+# Database
+db/
+
+# Binaries and configs
+bin/
+config/
+
+# Logs
+log/
+
+# Rails specific
+*.log
+coverage/
+.byebug_history
+
+# Git
+.git/
