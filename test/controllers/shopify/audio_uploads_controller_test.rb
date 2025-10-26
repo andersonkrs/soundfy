@@ -27,20 +27,9 @@ class Shopify::AudioUploadsControllerTest < ActionDispatch::IntegrationTest
     assert response.parsed_body["blob"]
     assert response.parsed_body["blob"]["signed_id"]
     assert_equal "bossa_nova_serge_quadrado.mp3", response.parsed_body["blob"]["filename"]
-    assert response.parsed_body["blob"]["metadata"]
-    assert response.parsed_body["blob"]["metadata"]["title"]
-    assert response.parsed_body["blob"]["metadata"]["artist"]
-    assert response.parsed_body["blob"]["metadata"]["cover_data"]
-  end
-
-  test "should analyze audio file metadata" do
-    post shopify_audio_uploads_url, params: {file: @audio_file}
-
-    assert_response :created
-
-    metadata = response.parsed_body["blob"]["metadata"]
-
-    assert metadata, "Metadata should be present"
+    assert response.parsed_body["blob"]["title"]
+    assert response.parsed_body["blob"]["artist"]
+    assert response.parsed_body["blob"]["cover_art"]
   end
 
   test "should reject file larger than 50MB" do

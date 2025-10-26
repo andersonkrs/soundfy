@@ -1,15 +1,11 @@
-import { useCallback } from 'react'
-import { BlockStack, Text, TextField, Button, Icon } from '@shopify/polaris'
-import { SearchIcon } from '@shopify/polaris-icons'
+import { useCallback, useEffect, useRef } from 'react'
 import { useRecordingsNewContext } from './Context'
 import { useDebouncedCallback } from 'use-debounce'
 
 export function ProductField() {
   const { uploading, form } = useRecordingsNewContext()
-
   const { data, setData } = form
-
-  console.log(data)
+  const searchFieldRef = useRef(null)
 
   if (uploading || !data.blob) {
     return null
@@ -42,41 +38,58 @@ export function ProductField() {
       }))
       shopify.saveBar.show('recording-save-bar')
     }
-  }, [shopify, setData])
+  }, [setData])
 
+  const handleSearchChange = useCallback((e) => {
+    const value = e.target.value
+    setData((prevData) => ({
+      ...prevData,
+      product_query: value,
+    }))
+
+    debouncedSearch?.cancel()
+    debouncedSearch(value)
+  }, [setData, debouncedSearch])
+
+  const handleBrowseClick = useCallback(() => {
+    handleVariantSelection()
+    debouncedSearch.cancel()
+  }, [handleVariantSelection, debouncedSearch])
 
   return (
-    <BlockStack gap="200">
-      <Text variant="headingMd" as="h2">
-        Product
-      </Text>
+    <s-stack vertical gap="200">
+      <s-text variant="heading-md">Product</s-text>
 
-      <TextField
-        type="text"
-        prefix={<Icon source={SearchIcon} tone="base" />}
-        placeholder="Search products"
-        value={data.product_query}
-        onChange={(value) => {
-          setData((prevData) => ({
-            ...prevData,
-            product_query: value,
-          }))
+      <s-stack gap="0">
+        <s-search-field
+          ref={searchFieldRef}
+          placeholder="Search products"
+          value={data.product_query || ''}
+          onInput={handleSearchChange}
+          style={{ flex: 1 }}
+        />
+        <s-button
+          icon="search"
+          onClick={handleBrowseClick}
+        >
+          Browse
+        </s-button>
+      </s-stack>
 
-          debouncedSearch?.cancel()
-          debouncedSearch(value)
-        }}
-        connectedRight={
-          <Button
-            icon={<SearchIcon />}
-            onClick={() => {
-              handleVariantSelection()
-              debouncedSearch.cancel()
-            }}
-          >
-            Browse
-          </Button>
-        }
-      />
-    </BlockStack>
+      {data.recordable?.variant_gid && (
+        <s-box
+          border-width="025"
+          border-radius="200"
+          padding="300"
+        >
+          <s-stack gap="200" align="center">
+            <s-icon source="product" />
+            <s-text variant="body-md">
+              {data.recordable.title || 'Selected variant'}
+            </s-text>
+          </s-stack>
+        </s-box>
+      )}
+    </s-stack>
   )
 }
