@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.4.6"
 
-gem "rails", "~> 8.1.0.beta1"
+gem "rails", "~> 8.1.0"
 
 # Shopify
 gem "shopify_app"
